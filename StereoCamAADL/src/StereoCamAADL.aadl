@@ -1,4 +1,4 @@
-package Packages
+package StreoCamAADL
 public
 	with Processors::ARM;
 
@@ -172,4 +172,4 @@ public
 
 
 	
-end Packages;
+end StreoCamAADL;
