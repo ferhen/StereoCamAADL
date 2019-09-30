@@ -1,0 +1,27 @@
+package StereoCamAADL_Threads
+public
+	
+-----------------------
+-------THREADS---------
+-----------------------
+thread stereo_img_processing
+	features
+		L_camera_img_In: in data port;
+		R_camera_img_In: in data port;
+		L_camera_on_off: out event port;
+		R_camera_on_off: out event port;
+end stereo_img_processing;
+
+thread implementation stereo_img_processing.impl
+end stereo_img_processing.impl;
+
+thread Laser_processing
+	features
+		proc_evt_In: in event port;
+end Laser_processing;
+
+thread implementation Laser_processing.impl
+end Laser_processing.impl;
+	
+	
+end StereoCamAADL_Threads;

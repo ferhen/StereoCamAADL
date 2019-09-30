@@ -7,6 +7,8 @@ public
 	with Buses::USB;
 
 	with Processor_Properties;
+	
+	with StereoCamAADL_Threads;
 
 	system vantSystem
 	end vantSystem;
@@ -68,7 +70,7 @@ public
 
 	process implementation controller.withThreads
 		subcomponents
-			this_thread_img_processing: thread stereo_img_processing.impl;
+			this_thread_img_processing: thread StereoCamAADL_Threads::stereo_img_processing.impl;
 		connections
 			L_cam_on_off: port this_thread_img_processing.L_camera_on_off -> L_camera_on_off;
 			R_cam_on_off: port this_thread_img_processing.R_camera_on_off -> R_camera_on_off;
@@ -83,32 +85,12 @@ public
 
 	process implementation controllerLaser.withThreads
 		subcomponents
-			this_thread_laser_processing: thread Laser_processing.impl;
+			this_thread_laser_processing: thread StereoCamAADL_Threads::Laser_processing.impl;
 		connections
 			Laser_sensing: port proc_evt_In -> this_thread_laser_processing.proc_evt_In;
 	end controllerLaser.withThreads;
 
------------------------
--------THREADS---------
------------------------
-	thread stereo_img_processing
-		features
-			L_camera_img_In: in data port;
-			R_camera_img_In: in data port;
-			L_camera_on_off: out event port;
-			R_camera_on_off: out event port;
-	end stereo_img_processing;
 
-	thread implementation stereo_img_processing.impl
-	end stereo_img_processing.impl;
-
-	thread Laser_processing
-		features
-			proc_evt_In: in event port;
-	end Laser_processing;
-
-	thread implementation Laser_processing.impl
-	end Laser_processing.impl;
 
 -----------------------
 -------CAMERA----------
