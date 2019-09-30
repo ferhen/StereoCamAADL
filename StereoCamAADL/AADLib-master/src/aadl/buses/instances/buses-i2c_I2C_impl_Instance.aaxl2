@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="ASCII"?>
+<instance:SystemInstance xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aadl2="http://aadl.info/AADL/2.0" xmlns:instance="http://aadl.info/AADL/2.0/instance" name="I2C_impl_Instance" category="bus">
+  <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+    <property href="../../property_set/bus_properties.aadl#Bus_Properties.Bandwidth"/>
+    <ownedValue>
+      <ownedValue xsi:type="aadl2:IntegerLiteral" value="400000">
+        <unit href="../../../../../../plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.18/@ownedLiteral.0"/>
+      </ownedValue>
+    </ownedValue>
+    <propertyAssociation href="../buses-i2c.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedPropertyAssociation.0"/>
+  </ownedPropertyAssociation>
+  <systemOperationMode name="No Modes"/>
+  <componentImplementation xsi:type="aadl2:BusImplementation" href="../buses-i2c.aadl#Buses.I2C.I2C.impl"/>
+</instance:SystemInstance>

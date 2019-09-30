@@ -1,0 +1,16 @@
+Check connection binding consistency Report
+
+Warning! CRTP_Rx_Task.Syslink_Packet -> Main_Loop.Syslink_Packet_Rx: Connection STM32F405_Firmware.CRTP_Rx_Task.Syslink_Packet -> Main_Loop.Syslink_Packet_Rx has no actual connection binding to hardware
+ERROR:  CRTP_Rx_Task.Syslink_Packet -> Main_Loop.Syslink_Packet_Rx: Hardware (processor or device) of connection STM32F405_Firmware.CRTP_Rx_Task.Syslink_Packet -> Main_Loop.Syslink_Packet_Rx source and destination are not physically connected
+Warning! Main_Loop.Syslink_Packet_Tx -> CRTP_Tx_Task.Syslink_Packet: Connection STM32F405_Firmware.Main_Loop.Syslink_Packet_Tx -> CRTP_Tx_Task.Syslink_Packet has no actual connection binding to hardware
+ERROR:  Main_Loop.Syslink_Packet_Tx -> CRTP_Tx_Task.Syslink_Packet: Hardware (processor or device) of connection STM32F405_Firmware.Main_Loop.Syslink_Packet_Tx -> CRTP_Tx_Task.Syslink_Packet source and destination are not physically connected
+Warning! STM32F405_Firmware.CRTP_Tx_Task.Msg -> nRF51822_Firmware.Syslink_Packet_RX: Connection STM32F405_Firmware.CRTP_Tx_Task.Msg -> nRF51822_Firmware.Syslink_Packet_RX has no actual connection binding to hardware
+ERROR:  STM32F405_Firmware.CRTP_Tx_Task.Msg -> nRF51822_Firmware.Syslink_Packet_RX: Hardware (processor or device) of connection STM32F405_Firmware.CRTP_Tx_Task.Msg -> nRF51822_Firmware.Syslink_Packet_RX source and destination are not physically connected
+Warning! STM32F405_Firmware.Main_Loop.Rate_1 -> M1.rate: Connection STM32F405_Firmware.Main_Loop.Rate_1 -> M1.rate has no actual connection binding to hardware
+ERROR:  STM32F405_Firmware.Main_Loop.Rate_1 -> M1.rate: Hardware (processor or device) of connection STM32F405_Firmware.Main_Loop.Rate_1 -> M1.rate source and destination are not physically connected
+Warning! STM32F405_Firmware.Main_Loop.Rate_2 -> M2.rate: Connection STM32F405_Firmware.Main_Loop.Rate_2 -> M2.rate has no actual connection binding to hardware
+ERROR:  STM32F405_Firmware.Main_Loop.Rate_2 -> M2.rate: Hardware (processor or device) of connection STM32F405_Firmware.Main_Loop.Rate_2 -> M2.rate source and destination are not physically connected
+Warning! STM32F405_Firmware.Main_Loop.Rate_3 -> M3.rate: Connection STM32F405_Firmware.Main_Loop.Rate_3 -> M3.rate has no actual connection binding to hardware
+ERROR:  STM32F405_Firmware.Main_Loop.Rate_3 -> M3.rate: Hardware (processor or device) of connection STM32F405_Firmware.Main_Loop.Rate_3 -> M3.rate source and destination are not physically connected
+Warning! STM32F405_Firmware.Main_Loop.Rate_4 -> M4.rate: Connection STM32F405_Firmware.Main_Loop.Rate_4 -> M4.rate has no actual connection binding to hardware
+ERROR:  STM32F405_Firmware.Main_Loop.Rate_4 -> M4.rate: Hardware (processor or device) of connection STM32F405_Firmware.Main_Loop.Rate_4 -> M4.rate source and destination are not physically connected

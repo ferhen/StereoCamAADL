@@ -1,0 +1,45 @@
+Latency analysis with preference settings: asynchronous system/major partition frame/worst case as deadline/best case as empty queue
+
+Latency results for end-to-end flow 'etef1' of system 'Crazyflie_System.impl',
+
+Result,Min Specified,Min Actual,Min Method,Max Specified,Max Actual,Max Method,Comments,
+device MPU9250,,0.0ms,first sampling,,0.0ms,first sampling,
+device MPU9250,0.2ms,0.2ms,specified,0.5ms,0.5ms,specified,
+connection MPU9250.DOF6 -> STM32F405_Firmware.Main_Loop.DOFs,,0.0ms,no latency,,0.0ms,no latency,
+thread STM32F405_Firmware.Main_Loop,,0.0ms,sampling,,2.0ms,sampling,Best case 0 ms worst case 2.0ms (period) sampling delay,
+thread STM32F405_Firmware.Main_Loop,,0.1ms,processing time,,0.2ms,processing time,Using execution time as deadline was not set,
+connection STM32F405_Firmware.Main_Loop.Rate_1 -> M1.rate,,0.0ms,no latency,,0.0ms,no latency,
+device M1,,0.0ms,queued,,0.0ms,queued,Data port as queue size 1 for sporadic, aperiodic, timed dispatch,Sporadic or periodic has period delay per queue element,Assume best case empty queue,
+device M1,0.1ms,0.1ms,specified,0.1ms,0.1ms,specified,
+Latency Total,0.3ms,0.4ms,,0.6ms,2.8ms,,
+Specified End To End Latency,,0.0ms,,,2.0ms,,
+End to end Latency Summary,
+INFO,Minimum actual latency total 0.400ms is greater or equal to expected minimum end to end latency 0.000ms,
+ERROR,Maximum actual latency total 2.80ms exceeds expected maximum end to end latency 2.00ms,
+WARNING,Jitter of actual latency total 0.400..2.80ms exceeds expected end to end latency jitter 0.000..2.00ms,
+
+
+
+Latency results for end-to-end flow 'etef2' of system 'Crazyflie_System.impl',
+
+Result,Min Specified,Min Actual,Min Method,Max Specified,Max Actual,Max Method,Comments,
+process nRF51822_Firmware,1.0ms,1.0ms,specified,2.0ms,2.0ms,specified,
+connection nRF51822_Firmware.Syslink_Packet_TX -> STM32F405_Firmware.CRTP_Rx_Task.Msg,,0.0ms,no latency,,0.0ms,no latency,
+thread STM32F405_Firmware.CRTP_Rx_Task,,0.0ms,queued,,1.0ms,queued,Data port as queue size 1 for sporadic, aperiodic, timed dispatch,Sporadic or periodic has period delay per queue element,Assume best case empty queue,
+thread STM32F405_Firmware.CRTP_Rx_Task,,0.01ms,processing time,,0.05ms,processing time,Using execution time as deadline was not set,
+connection CRTP_Rx_Task.Syslink_Packet -> Main_Loop.Syslink_Packet_Rx,,0.0ms,no latency,,0.0ms,no latency,
+thread STM32F405_Firmware.Main_Loop,,0.0ms,sampling,,2.0ms,sampling,Max: Worst case: Round up sampling delay to period 2.0ms,
+thread STM32F405_Firmware.Main_Loop,,0.1ms,processing time,,0.2ms,processing time,Using execution time as deadline was not set,
+connection STM32F405_Firmware.Main_Loop.Rate_1 -> M1.rate,,0.0ms,no latency,,0.0ms,no latency,
+device M1,,0.0ms,queued,,0.0ms,queued,Data port as queue size 1 for sporadic, aperiodic, timed dispatch,Sporadic or periodic has period delay per queue element,Assume best case empty queue,
+device M1,0.1ms,0.1ms,specified,0.1ms,0.1ms,specified,
+Latency Total,1.1ms,1.21ms,,2.1ms,5.35ms,,
+Specified End To End Latency,,0.0ms,,,2.0ms,,
+End to end Latency Summary,
+INFO,Minimum actual latency total 1.21ms is greater or equal to expected minimum end to end latency 0.000ms,
+ERROR,Maximum specified flow latency total 2.10ms exceeds expected maximum end to end latency 2.00ms,
+ERROR,Maximum actual latency total 5.35ms exceeds expected maximum end to end latency 2.00ms,
+WARNING,Jitter of actual latency total 1.21..5.35ms exceeds expected end to end latency jitter 0.000..2.00ms,
+
+
+

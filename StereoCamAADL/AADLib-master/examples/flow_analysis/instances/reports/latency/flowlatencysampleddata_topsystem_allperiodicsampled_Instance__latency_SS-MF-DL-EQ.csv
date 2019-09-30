@@ -1,0 +1,25 @@
+Latency analysis with preference settings: synchronous system/major partition frame/worst case as deadline/best case as empty queue
+
+Latency results for end-to-end flow 'app.etelatency' of system 'topsystem.allperiodicsampled',
+
+Result,Min Specified,Min Actual,Min Method,Max Specified,Max Actual,Max Method,Comments,
+device app.sense,,0.0ms,first sampling,,0.0ms,first sampling,
+device app.sense,2.0ms,1.0ms,processing time,2.0ms,2.0ms,deadline,
+connection sense.outed -> compute1.Tstep1.ined,,0.0ms,no latency,,0.0ms,no latency,
+thread app.compute1.Tstep1,45.0ms,6.0ms,processing time,45.0ms,45.0ms,deadline,
+connection compute1.Tstep1.outed -> compute2.Tstep2.ined,,0.0ms,no latency,,0.0ms,no latency,
+thread app.compute2.Tstep2,70.0ms,15.0ms,processing time,70.0ms,70.0ms,deadline,
+connection compute2.Tstep2.outed -> compute3.Tstep3.ined,,0.0ms,no latency,,0.0ms,no latency,
+thread app.compute3.Tstep3,45.0ms,6.0ms,processing time,45.0ms,45.0ms,deadline,
+connection compute3.Tstep3.outed -> actuate.ined,,0.0ms,no latency,,0.0ms,no latency,
+device app.actuate,3.0ms,1.0ms,processing time,3.0ms,3.0ms,deadline,
+Latency Total,165.0ms,29.0ms,,165.0ms,165.0ms,,
+Specified End To End Latency,,303.0ms,,,303.0ms,,
+End to end Latency Summary,
+WARNING,Minimum specified flow latency total 165.0ms less than expected minimum end to end latency 303.0ms (better response time),
+WARNING,Minimum actual latency total 29.0ms less than expected minimum end to end latency 303.0ms (faster actual minimum response time),
+INFO,Maximum actual latency total 165.0ms is less or equal to expected maximum end to end latency 303.0ms,
+WARNING,Jitter of actual latency total 29.0..165.0ms exceeds expected end to end latency jitter 303.0..303.0ms,
+
+
+

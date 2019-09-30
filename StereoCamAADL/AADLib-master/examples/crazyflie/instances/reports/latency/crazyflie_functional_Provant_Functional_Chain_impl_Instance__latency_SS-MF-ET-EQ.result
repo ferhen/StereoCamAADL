@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="ASCII"?>
+<result:AnalysisResult xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:result="http://www.osate.org/result/Result" analysis="latency" message="SS-MF-ET-EQ">
+  <modelElement href="../../crazyflie_functional_Provant_Functional_Chain_impl_Instance.aaxl2#/"/>
+  <parameters value="ACED0005737200116A6176612E6C616E672E426F6F6C65616ECD207280D59CFAEE0200015A000576616C7565787000"/>
+  <parameters value="ACED0005737200116A6176612E6C616E672E426F6F6C65616ECD207280D59CFAEE0200015A000576616C7565787001"/>
+  <parameters value="ACED0005737200116A6176612E6C616E672E426F6F6C65616ECD207280D59CFAEE0200015A000576616C7565787000"/>
+  <parameters value="ACED0005737200116A6176612E6C616E672E426F6F6C65616ECD207280D59CFAEE0200015A000576616C7565787001"/>
+  <results message="Latency results for f_etef1" resultType="FAILURE">
+    <values xsi:type="result:StringValue" value=""/>
+    <values xsi:type="result:RealValue" value="2.2"/>
+    <values xsi:type="result:RealValue" value="35.5"/>
+    <values xsi:type="result:RealValue" value="0.4"/>
+    <values xsi:type="result:RealValue" value="1.2"/>
+    <values xsi:type="result:RealValue"/>
+    <values xsi:type="result:RealValue" value="20.0"/>
+    <diagnostics diagnosticType="INFO" message="Minimum actual latency total 2.20ms is greater or equal to expected minimum end to end latency 0.000ms">
+      <modelElement href="../../crazyflie_functional_Provant_Functional_Chain_impl_Instance.aaxl2#//@endToEndFlow.0"/>
+    </diagnostics>
+    <diagnostics diagnosticType="ERROR" message="Maximum actual latency total 35.5ms exceeds expected maximum end to end latency 20.0ms">
+      <modelElement href="../../crazyflie_functional_Provant_Functional_Chain_impl_Instance.aaxl2#//@endToEndFlow.0"/>
+    </diagnostics>
+    <diagnostics diagnosticType="WARNING" message="Jitter of actual latency total 2.20..35.5ms exceeds expected end to end latency jitter 0.000..20.0ms">
+      <modelElement href="../../crazyflie_functional_Provant_Functional_Chain_impl_Instance.aaxl2#//@endToEndFlow.0"/>
+    </diagnostics>
+    <subResults>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:StringValue" value="first sampling"/>
+      <values xsi:type="result:StringValue" value="first sampling"/>
+      <modelElement href="../../crazyflie_functional_Provant_Functional_Chain_impl_Instance.aaxl2#//@componentInstance.1"/>
+    </subResults>
+    <subResults>
+      <values xsi:type="result:RealValue" value="0.1"/>
+      <values xsi:type="result:RealValue" value="0.3"/>
+      <values xsi:type="result:RealValue" value="0.1"/>
+      <values xsi:type="result:RealValue" value="0.3"/>
+      <values xsi:type="result:StringValue" value="specified"/>
+      <values xsi:type="result:StringValue" value="specified"/>
+      <modelElement href="../../crazyflie_functional_Provant_Functional_Chain_impl_Instance.aaxl2#//@componentInstance.1"/>
+    </subResults>
+    <subResults>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:StringValue" value="no latency"/>
+      <values xsi:type="result:StringValue" value="no latency"/>
+      <modelElement href="../../crazyflie_functional_Provant_Functional_Chain_impl_Instance.aaxl2#//@connectionInstance.1"/>
+    </subResults>
+    <subResults>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:RealValue" value="4.7"/>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:StringValue" value="sampling"/>
+      <values xsi:type="result:StringValue" value="sampling"/>
+      <diagnostics diagnosticType="INFO" message="Min: Best case: 0 ms sampling delay">
+        <modelElement href="../../crazyflie_functional_Provant_Functional_Chain_impl_Instance.aaxl2#//@componentInstance.6"/>
+      </diagnostics>
+      <diagnostics diagnosticType="INFO" message="Assume synchronous communication">
+        <modelElement href="../../crazyflie_functional_Provant_Functional_Chain_impl_Instance.aaxl2#//@componentInstance.6"/>
+      </diagnostics>
+      <diagnostics diagnosticType="INFO" message="Max: Worst case: Round up sampling delay to period 5.0ms">
+        <modelElement href="../../crazyflie_functional_Provant_Functional_Chain_impl_Instance.aaxl2#//@componentInstance.6"/>
+      </diagnostics>
+      <modelElement href="../../crazyflie_functional_Provant_Functional_Chain_impl_Instance.aaxl2#//@componentInstance.6"/>
+    </subResults>
+    <subResults>
+      <values xsi:type="result:RealValue" value="1.0"/>
+      <values xsi:type="result:RealValue" value="2.0"/>
+      <values xsi:type="result:RealValue" value="0.1"/>
+      <values xsi:type="result:RealValue" value="0.2"/>
+      <values xsi:type="result:StringValue" value="processing time"/>
+      <values xsi:type="result:StringValue" value="processing time"/>
+      <diagnostics diagnosticType="WARNING" message="Max: actual latency exceeds max flow latency">
+        <modelElement href="../../crazyflie_functional_Provant_Functional_Chain_impl_Instance.aaxl2#//@componentInstance.6"/>
+      </diagnostics>
+      <diagnostics diagnosticType="WARNING" message="Min: actual latency exceeds min flow latency">
+        <modelElement href="../../crazyflie_functional_Provant_Functional_Chain_impl_Instance.aaxl2#//@componentInstance.6"/>
+      </diagnostics>
+      <modelElement href="../../crazyflie_functional_Provant_Functional_Chain_impl_Instance.aaxl2#//@componentInstance.6"/>
+    </subResults>
+    <subResults>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:StringValue" value="no latency"/>
+      <values xsi:type="result:StringValue" value="no latency"/>
+      <modelElement href="../../crazyflie_functional_Provant_Functional_Chain_impl_Instance.aaxl2#//@connectionInstance.7"/>
+    </subResults>
+    <subResults>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:RealValue" value="8.0"/>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:StringValue" value="sampling"/>
+      <values xsi:type="result:StringValue" value="sampling"/>
+      <diagnostics diagnosticType="INFO" message="Min: Best case: 0 ms sampling delay">
+        <modelElement href="../../crazyflie_functional_Provant_Functional_Chain_impl_Instance.aaxl2#//@componentInstance.7"/>
+      </diagnostics>
+      <diagnostics diagnosticType="INFO" message="Assume synchronous communication">
+        <modelElement href="../../crazyflie_functional_Provant_Functional_Chain_impl_Instance.aaxl2#//@componentInstance.7"/>
+      </diagnostics>
+      <diagnostics diagnosticType="INFO" message="Max: Worst case: Round up sampling delay to period 10.0ms">
+        <modelElement href="../../crazyflie_functional_Provant_Functional_Chain_impl_Instance.aaxl2#//@componentInstance.7"/>
+      </diagnostics>
+      <modelElement href="../../crazyflie_functional_Provant_Functional_Chain_impl_Instance.aaxl2#//@componentInstance.7"/>
+    </subResults>
+    <subResults>
+      <values xsi:type="result:RealValue" value="1.0"/>
+      <values xsi:type="result:RealValue" value="2.0"/>
+      <values xsi:type="result:RealValue" value="0.1"/>
+      <values xsi:type="result:RealValue" value="0.2"/>
+      <values xsi:type="result:StringValue" value="processing time"/>
+      <values xsi:type="result:StringValue" value="processing time"/>
+      <diagnostics diagnosticType="WARNING" message="Max: actual latency exceeds max flow latency">
+        <modelElement href="../../crazyflie_functional_Provant_Functional_Chain_impl_Instance.aaxl2#//@componentInstance.7"/>
+      </diagnostics>
+      <diagnostics diagnosticType="WARNING" message="Min: actual latency exceeds min flow latency">
+        <modelElement href="../../crazyflie_functional_Provant_Functional_Chain_impl_Instance.aaxl2#//@componentInstance.7"/>
+      </diagnostics>
+      <modelElement href="../../crazyflie_functional_Provant_Functional_Chain_impl_Instance.aaxl2#//@componentInstance.7"/>
+    </subResults>
+    <subResults>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:StringValue" value="no latency"/>
+      <values xsi:type="result:StringValue" value="no latency"/>
+      <modelElement href="../../crazyflie_functional_Provant_Functional_Chain_impl_Instance.aaxl2#//@connectionInstance.8"/>
+    </subResults>
+    <subResults>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:RealValue" value="18.0"/>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:StringValue" value="sampling"/>
+      <values xsi:type="result:StringValue" value="sampling"/>
+      <diagnostics diagnosticType="INFO" message="Min: Best case: 0 ms sampling delay">
+        <modelElement href="../../crazyflie_functional_Provant_Functional_Chain_impl_Instance.aaxl2#//@componentInstance.8"/>
+      </diagnostics>
+      <diagnostics diagnosticType="INFO" message="Assume synchronous communication">
+        <modelElement href="../../crazyflie_functional_Provant_Functional_Chain_impl_Instance.aaxl2#//@componentInstance.8"/>
+      </diagnostics>
+      <diagnostics diagnosticType="INFO" message="Max: Worst case: Round up sampling delay to period 20.0ms">
+        <modelElement href="../../crazyflie_functional_Provant_Functional_Chain_impl_Instance.aaxl2#//@componentInstance.8"/>
+      </diagnostics>
+      <modelElement href="../../crazyflie_functional_Provant_Functional_Chain_impl_Instance.aaxl2#//@componentInstance.8"/>
+    </subResults>
+    <subResults>
+      <values xsi:type="result:RealValue" value="0.1"/>
+      <values xsi:type="result:RealValue" value="0.5"/>
+      <values xsi:type="result:RealValue" value="0.1"/>
+      <values xsi:type="result:RealValue" value="0.5"/>
+      <values xsi:type="result:StringValue" value="specified"/>
+      <values xsi:type="result:StringValue" value="specified"/>
+      <modelElement href="../../crazyflie_functional_Provant_Functional_Chain_impl_Instance.aaxl2#//@componentInstance.8"/>
+    </subResults>
+    <modelElement href="../../crazyflie_functional_Provant_Functional_Chain_impl_Instance.aaxl2#//@endToEndFlow.0"/>
+  </results>
+  <results message="Latency results for f_etef1bis" resultType="FAILURE">
+    <values xsi:type="result:StringValue" value=""/>
+    <values xsi:type="result:RealValue" value="1.2"/>
+    <values xsi:type="result:RealValue" value="30.5"/>
+    <values xsi:type="result:RealValue" value="0.3"/>
+    <values xsi:type="result:RealValue" value="1.0"/>
+    <values xsi:type="result:RealValue"/>
+    <values xsi:type="result:RealValue" value="2.0"/>
+    <diagnostics diagnosticType="INFO" message="Minimum actual latency total 1.20ms is greater or equal to expected minimum end to end latency 0.000ms">
+      <modelElement href="../../crazyflie_functional_Provant_Functional_Chain_impl_Instance.aaxl2#//@endToEndFlow.1"/>
+    </diagnostics>
+    <diagnostics diagnosticType="ERROR" message="Maximum actual latency total 30.5ms exceeds expected maximum end to end latency 2.00ms">
+      <modelElement href="../../crazyflie_functional_Provant_Functional_Chain_impl_Instance.aaxl2#//@endToEndFlow.1"/>
+    </diagnostics>
+    <diagnostics diagnosticType="WARNING" message="Jitter of actual latency total 1.20..30.5ms exceeds expected end to end latency jitter 0.000..2.00ms">
+      <modelElement href="../../crazyflie_functional_Provant_Functional_Chain_impl_Instance.aaxl2#//@endToEndFlow.1"/>
+    </diagnostics>
+    <subResults>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:StringValue" value="first sampling"/>
+      <values xsi:type="result:StringValue" value="first sampling"/>
+      <modelElement href="../../crazyflie_functional_Provant_Functional_Chain_impl_Instance.aaxl2#//@componentInstance.1"/>
+    </subResults>
+    <subResults>
+      <values xsi:type="result:RealValue" value="0.1"/>
+      <values xsi:type="result:RealValue" value="0.3"/>
+      <values xsi:type="result:RealValue" value="0.1"/>
+      <values xsi:type="result:RealValue" value="0.3"/>
+      <values xsi:type="result:StringValue" value="specified"/>
+      <values xsi:type="result:StringValue" value="specified"/>
+      <modelElement href="../../crazyflie_functional_Provant_Functional_Chain_impl_Instance.aaxl2#//@componentInstance.1"/>
+    </subResults>
+    <subResults>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:StringValue" value="no latency"/>
+      <values xsi:type="result:StringValue" value="no latency"/>
+      <modelElement href="../../crazyflie_functional_Provant_Functional_Chain_impl_Instance.aaxl2#//@connectionInstance.2"/>
+    </subResults>
+    <subResults>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:RealValue" value="9.7"/>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:StringValue" value="sampling"/>
+      <values xsi:type="result:StringValue" value="sampling"/>
+      <diagnostics diagnosticType="INFO" message="Min: Best case: 0 ms sampling delay">
+        <modelElement href="../../crazyflie_functional_Provant_Functional_Chain_impl_Instance.aaxl2#//@componentInstance.7"/>
+      </diagnostics>
+      <diagnostics diagnosticType="INFO" message="Assume synchronous communication">
+        <modelElement href="../../crazyflie_functional_Provant_Functional_Chain_impl_Instance.aaxl2#//@componentInstance.7"/>
+      </diagnostics>
+      <diagnostics diagnosticType="INFO" message="Max: Worst case: Round up sampling delay to period 10.0ms">
+        <modelElement href="../../crazyflie_functional_Provant_Functional_Chain_impl_Instance.aaxl2#//@componentInstance.7"/>
+      </diagnostics>
+      <modelElement href="../../crazyflie_functional_Provant_Functional_Chain_impl_Instance.aaxl2#//@componentInstance.7"/>
+    </subResults>
+    <subResults>
+      <values xsi:type="result:RealValue" value="1.0"/>
+      <values xsi:type="result:RealValue" value="2.0"/>
+      <values xsi:type="result:RealValue" value="0.1"/>
+      <values xsi:type="result:RealValue" value="0.2"/>
+      <values xsi:type="result:StringValue" value="processing time"/>
+      <values xsi:type="result:StringValue" value="processing time"/>
+      <diagnostics diagnosticType="WARNING" message="Max: actual latency exceeds max flow latency">
+        <modelElement href="../../crazyflie_functional_Provant_Functional_Chain_impl_Instance.aaxl2#//@componentInstance.7"/>
+      </diagnostics>
+      <diagnostics diagnosticType="WARNING" message="Min: actual latency exceeds min flow latency">
+        <modelElement href="../../crazyflie_functional_Provant_Functional_Chain_impl_Instance.aaxl2#//@componentInstance.7"/>
+      </diagnostics>
+      <modelElement href="../../crazyflie_functional_Provant_Functional_Chain_impl_Instance.aaxl2#//@componentInstance.7"/>
+    </subResults>
+    <subResults>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:StringValue" value="no latency"/>
+      <values xsi:type="result:StringValue" value="no latency"/>
+      <modelElement href="../../crazyflie_functional_Provant_Functional_Chain_impl_Instance.aaxl2#//@connectionInstance.8"/>
+    </subResults>
+    <subResults>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:RealValue" value="18.0"/>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:StringValue" value="sampling"/>
+      <values xsi:type="result:StringValue" value="sampling"/>
+      <diagnostics diagnosticType="INFO" message="Min: Best case: 0 ms sampling delay">
+        <modelElement href="../../crazyflie_functional_Provant_Functional_Chain_impl_Instance.aaxl2#//@componentInstance.8"/>
+      </diagnostics>
+      <diagnostics diagnosticType="INFO" message="Assume synchronous communication">
+        <modelElement href="../../crazyflie_functional_Provant_Functional_Chain_impl_Instance.aaxl2#//@componentInstance.8"/>
+      </diagnostics>
+      <diagnostics diagnosticType="INFO" message="Max: Worst case: Round up sampling delay to period 20.0ms">
+        <modelElement href="../../crazyflie_functional_Provant_Functional_Chain_impl_Instance.aaxl2#//@componentInstance.8"/>
+      </diagnostics>
+      <modelElement href="../../crazyflie_functional_Provant_Functional_Chain_impl_Instance.aaxl2#//@componentInstance.8"/>
+    </subResults>
+    <subResults>
+      <values xsi:type="result:RealValue" value="0.1"/>
+      <values xsi:type="result:RealValue" value="0.5"/>
+      <values xsi:type="result:RealValue" value="0.1"/>
+      <values xsi:type="result:RealValue" value="0.5"/>
+      <values xsi:type="result:StringValue" value="specified"/>
+      <values xsi:type="result:StringValue" value="specified"/>
+      <modelElement href="../../crazyflie_functional_Provant_Functional_Chain_impl_Instance.aaxl2#//@componentInstance.8"/>
+    </subResults>
+    <modelElement href="../../crazyflie_functional_Provant_Functional_Chain_impl_Instance.aaxl2#//@endToEndFlow.1"/>
+  </results>
+  <results message="Latency results for f_etef2" resultType="FAILURE">
+    <values xsi:type="result:StringValue" value=""/>
+    <values xsi:type="result:RealValue" value="2.2"/>
+    <values xsi:type="result:RealValue" value="35.5"/>
+    <values xsi:type="result:RealValue" value="0.4"/>
+    <values xsi:type="result:RealValue" value="1.2"/>
+    <values xsi:type="result:RealValue"/>
+    <values xsi:type="result:RealValue" value="20.0"/>
+    <diagnostics diagnosticType="INFO" message="Minimum actual latency total 2.20ms is greater or equal to expected minimum end to end latency 0.000ms">
+      <modelElement href="../../crazyflie_functional_Provant_Functional_Chain_impl_Instance.aaxl2#//@endToEndFlow.2"/>
+    </diagnostics>
+    <diagnostics diagnosticType="ERROR" message="Maximum actual latency total 35.5ms exceeds expected maximum end to end latency 20.0ms">
+      <modelElement href="../../crazyflie_functional_Provant_Functional_Chain_impl_Instance.aaxl2#//@endToEndFlow.2"/>
+    </diagnostics>
+    <diagnostics diagnosticType="WARNING" message="Jitter of actual latency total 2.20..35.5ms exceeds expected end to end latency jitter 0.000..20.0ms">
+      <modelElement href="../../crazyflie_functional_Provant_Functional_Chain_impl_Instance.aaxl2#//@endToEndFlow.2"/>
+    </diagnostics>
+    <subResults>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:StringValue" value="first sampling"/>
+      <values xsi:type="result:StringValue" value="first sampling"/>
+      <modelElement href="../../crazyflie_functional_Provant_Functional_Chain_impl_Instance.aaxl2#//@componentInstance.0"/>
+    </subResults>
+    <subResults>
+      <values xsi:type="result:RealValue" value="0.1"/>
+      <values xsi:type="result:RealValue" value="0.3"/>
+      <values xsi:type="result:RealValue" value="0.1"/>
+      <values xsi:type="result:RealValue" value="0.3"/>
+      <values xsi:type="result:StringValue" value="specified"/>
+      <values xsi:type="result:StringValue" value="specified"/>
+      <modelElement href="../../crazyflie_functional_Provant_Functional_Chain_impl_Instance.aaxl2#//@componentInstance.0"/>
+    </subResults>
+    <subResults>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:StringValue" value="no latency"/>
+      <values xsi:type="result:StringValue" value="no latency"/>
+      <modelElement href="../../crazyflie_functional_Provant_Functional_Chain_impl_Instance.aaxl2#//@connectionInstance.0"/>
+    </subResults>
+    <subResults>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:RealValue" value="4.7"/>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:StringValue" value="sampling"/>
+      <values xsi:type="result:StringValue" value="sampling"/>
+      <diagnostics diagnosticType="INFO" message="Min: Best case: 0 ms sampling delay">
+        <modelElement href="../../crazyflie_functional_Provant_Functional_Chain_impl_Instance.aaxl2#//@componentInstance.6"/>
+      </diagnostics>
+      <diagnostics diagnosticType="INFO" message="Assume synchronous communication">
+        <modelElement href="../../crazyflie_functional_Provant_Functional_Chain_impl_Instance.aaxl2#//@componentInstance.6"/>
+      </diagnostics>
+      <diagnostics diagnosticType="INFO" message="Max: Worst case: Round up sampling delay to period 5.0ms">
+        <modelElement href="../../crazyflie_functional_Provant_Functional_Chain_impl_Instance.aaxl2#//@componentInstance.6"/>
+      </diagnostics>
+      <modelElement href="../../crazyflie_functional_Provant_Functional_Chain_impl_Instance.aaxl2#//@componentInstance.6"/>
+    </subResults>
+    <subResults>
+      <values xsi:type="result:RealValue" value="1.0"/>
+      <values xsi:type="result:RealValue" value="2.0"/>
+      <values xsi:type="result:RealValue" value="0.1"/>
+      <values xsi:type="result:RealValue" value="0.2"/>
+      <values xsi:type="result:StringValue" value="processing time"/>
+      <values xsi:type="result:StringValue" value="processing time"/>
+      <diagnostics diagnosticType="WARNING" message="Max: actual latency exceeds max flow latency">
+        <modelElement href="../../crazyflie_functional_Provant_Functional_Chain_impl_Instance.aaxl2#//@componentInstance.6"/>
+      </diagnostics>
+      <diagnostics diagnosticType="WARNING" message="Min: actual latency exceeds min flow latency">
+        <modelElement href="../../crazyflie_functional_Provant_Functional_Chain_impl_Instance.aaxl2#//@componentInstance.6"/>
+      </diagnostics>
+      <modelElement href="../../crazyflie_functional_Provant_Functional_Chain_impl_Instance.aaxl2#//@componentInstance.6"/>
+    </subResults>
+    <subResults>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:StringValue" value="no latency"/>
+      <values xsi:type="result:StringValue" value="no latency"/>
+      <modelElement href="../../crazyflie_functional_Provant_Functional_Chain_impl_Instance.aaxl2#//@connectionInstance.7"/>
+    </subResults>
+    <subResults>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:RealValue" value="8.0"/>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:StringValue" value="sampling"/>
+      <values xsi:type="result:StringValue" value="sampling"/>
+      <diagnostics diagnosticType="INFO" message="Min: Best case: 0 ms sampling delay">
+        <modelElement href="../../crazyflie_functional_Provant_Functional_Chain_impl_Instance.aaxl2#//@componentInstance.7"/>
+      </diagnostics>
+      <diagnostics diagnosticType="INFO" message="Assume synchronous communication">
+        <modelElement href="../../crazyflie_functional_Provant_Functional_Chain_impl_Instance.aaxl2#//@componentInstance.7"/>
+      </diagnostics>
+      <diagnostics diagnosticType="INFO" message="Max: Worst case: Round up sampling delay to period 10.0ms">
+        <modelElement href="../../crazyflie_functional_Provant_Functional_Chain_impl_Instance.aaxl2#//@componentInstance.7"/>
+      </diagnostics>
+      <modelElement href="../../crazyflie_functional_Provant_Functional_Chain_impl_Instance.aaxl2#//@componentInstance.7"/>
+    </subResults>
+    <subResults>
+      <values xsi:type="result:RealValue" value="1.0"/>
+      <values xsi:type="result:RealValue" value="2.0"/>
+      <values xsi:type="result:RealValue" value="0.1"/>
+      <values xsi:type="result:RealValue" value="0.2"/>
+      <values xsi:type="result:StringValue" value="processing time"/>
+      <values xsi:type="result:StringValue" value="processing time"/>
+      <diagnostics diagnosticType="WARNING" message="Max: actual latency exceeds max flow latency">
+        <modelElement href="../../crazyflie_functional_Provant_Functional_Chain_impl_Instance.aaxl2#//@componentInstance.7"/>
+      </diagnostics>
+      <diagnostics diagnosticType="WARNING" message="Min: actual latency exceeds min flow latency">
+        <modelElement href="../../crazyflie_functional_Provant_Functional_Chain_impl_Instance.aaxl2#//@componentInstance.7"/>
+      </diagnostics>
+      <modelElement href="../../crazyflie_functional_Provant_Functional_Chain_impl_Instance.aaxl2#//@componentInstance.7"/>
+    </subResults>
+    <subResults>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:StringValue" value="no latency"/>
+      <values xsi:type="result:StringValue" value="no latency"/>
+      <modelElement href="../../crazyflie_functional_Provant_Functional_Chain_impl_Instance.aaxl2#//@connectionInstance.8"/>
+    </subResults>
+    <subResults>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:RealValue" value="18.0"/>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:StringValue" value="sampling"/>
+      <values xsi:type="result:StringValue" value="sampling"/>
+      <diagnostics diagnosticType="INFO" message="Min: Best case: 0 ms sampling delay">
+        <modelElement href="../../crazyflie_functional_Provant_Functional_Chain_impl_Instance.aaxl2#//@componentInstance.8"/>
+      </diagnostics>
+      <diagnostics diagnosticType="INFO" message="Assume synchronous communication">
+        <modelElement href="../../crazyflie_functional_Provant_Functional_Chain_impl_Instance.aaxl2#//@componentInstance.8"/>
+      </diagnostics>
+      <diagnostics diagnosticType="INFO" message="Max: Worst case: Round up sampling delay to period 20.0ms">
+        <modelElement href="../../crazyflie_functional_Provant_Functional_Chain_impl_Instance.aaxl2#//@componentInstance.8"/>
+      </diagnostics>
+      <modelElement href="../../crazyflie_functional_Provant_Functional_Chain_impl_Instance.aaxl2#//@componentInstance.8"/>
+    </subResults>
+    <subResults>
+      <values xsi:type="result:RealValue" value="0.1"/>
+      <values xsi:type="result:RealValue" value="0.5"/>
+      <values xsi:type="result:RealValue" value="0.1"/>
+      <values xsi:type="result:RealValue" value="0.5"/>
+      <values xsi:type="result:StringValue" value="specified"/>
+      <values xsi:type="result:StringValue" value="specified"/>
+      <modelElement href="../../crazyflie_functional_Provant_Functional_Chain_impl_Instance.aaxl2#//@componentInstance.8"/>
+    </subResults>
+    <modelElement href="../../crazyflie_functional_Provant_Functional_Chain_impl_Instance.aaxl2#//@endToEndFlow.2"/>
+  </results>
+</result:AnalysisResult>

@@ -1,0 +1,12 @@
+Bind threads to processors Report
+
+Binpacker Analysis Report
+
+Warning! Data size of connection source port Syslink_Packet_Rx not specified
+Warning! Data size of connection source port CRTP_Tx_Task.Msg not specified
+Warning! Data size of connection source port CRTP_Rx_Task.Syslink_Packet not specified
+Warning! Data size of connection source port Main_Loop.Syslink_Packet_Tx not specified
+
+Binpacking results: FAILED
+
+Thread to Processor Bindings
