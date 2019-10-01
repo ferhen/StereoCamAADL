@@ -1,5 +1,0 @@
-Bound Bus Bandwidth Analysis Report
-
-ERROR:  Tstep1: Thread instance app.compute1.Tstep1 has execution time, but no Reference_Processor. Please this property.
-ERROR:  Tstep2: Thread instance app.compute2.Tstep2 has execution time, but no Reference_Processor. Please this property.
-ERROR:  Tstep3: Thread instance app.compute3.Tstep3 has execution time, but no Reference_Processor. Please this property.

@@ -1,6 +1,0 @@
-Bound Resource Budget Analysis Report
-
-ERROR:  CRTP_Tx_Task: Thread instance Actual.STM32F405_Firmware.CRTP_Tx_Task has execution time, but no Reference_Processor. Please this property.
-ERROR:  CRTP_Rx_Task: Thread instance Actual.STM32F405_Firmware.CRTP_Rx_Task has execution time, but no Reference_Processor. Please this property.
-ERROR:  Power_Management: Thread instance Actual.STM32F405_Firmware.Power_Management has execution time, but no Reference_Processor. Please this property.
-ERROR:  Main_Loop: Thread instance Actual.STM32F405_Firmware.Main_Loop has execution time, but no Reference_Processor. Please this property.

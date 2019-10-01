@@ -1,0 +1,6 @@
+package buses::pwm
+public
+	
+	bus PWM
+	end PWM;
+end buses::pwm;

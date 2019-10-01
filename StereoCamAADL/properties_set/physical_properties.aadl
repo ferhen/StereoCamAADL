@@ -1,0 +1,130 @@
+property set Physical_Properties is
+
+  -----------------
+  -- Power units --
+  -----------------
+
+  Power_Units: type units 
+  (W, 
+   KW  => W * 1000,
+   MW  => KW * 1000, 
+   GW  => MW * 1000,
+   TW  => GW * 1000);
+  
+  Max_Power: constant aadlinteger units Physical_Properties::Power_Units => 2#1#e32 W;
+  Power : type aadlreal 0.0 W .. Physical_Properties::Max_Power units Physical_Properties::Power_Units;
+  Power_Consume : Physical_Properties::Power 
+     applies to (processor, device, memory, system);
+  Power_Provide : Physical_Properties::Power applies to (device);
+  Total_Power   : Physical_Properties::Power applies to (system);
+ 
+  ---------
+  -- EMC --
+  ---------
+
+  Ionizing_Dose_Units : type units (
+  rad, 
+  Krad  => rad * 1000,
+  Mrad  => Krad * 1000, 
+  Grad  => Mrad * 1000,
+  Trad  => Grad * 1000);
+  
+  Max_Ionizing_Dose: constant aadlinteger units Physical_Properties::Ionizing_Dose_Units => 2#1#e32 rad;
+  
+  Ionizing_Type : type aadlinteger 
+     0 rad .. Physical_Properties::Max_Ionizing_Dose units Physical_Properties::Ionizing_Dose_Units;
+  
+  TID : Physical_Properties::Ionizing_Type 
+     applies to (processor, device, memory);
+
+  ----------------
+  -- Mass units --
+  ----------------
+
+  Mass_Units: type units (g, Kg  => g  * 1000, T   => Kg * 1000);
+  Maximum_Mass: constant aadlinteger units Physical_Properties::Mass_Units => 2#1#e32 g;
+  Mass_Type : type aadlreal 0.0 g .. Physical_Properties::Maximum_Mass units Physical_Properties::Mass_Units;
+  Mass : Physical_Properties::Mass_Type applies to (processor, device, memory, system);
+  Max_Mass : Physical_Properties::Mass_Type
+     applies to (processor, device, memory, system);
+
+----------------------------------------------
+  -- Key Performance Indicator - Reliability --
+  ---------------------------------------------
+  --Mean time between failure MTTF
+  
+  -------------------
+  -- GYRO PROPERTY --
+  -------------------
+  Gyro_Range_Units : type units (radps);
+  
+  Max_Gyro_Range: constant aadlinteger units Physical_Properties::Gyro_Range_Units => 2#1#e32 radps;
+  
+  Gyro_Type : type aadlinteger 
+     0 radps .. Physical_Properties::Max_Gyro_Range units Physical_Properties::Gyro_Range_Units;
+  
+  fs_gyro_range: Physical_Properties::Gyro_Type applies to (device);
+  fs_gyro_resolution: Physical_Properties::Gyro_Type applies to (device);
+  min_gyro_error_margin: Physical_Properties::Gyro_Type applies to (device);
+  max_gyro_error_margin: Physical_Properties::Gyro_Type applies to (device);
+  
+  -------------------
+  -- ACC PROPERTY --
+  -------------------
+  Acc_Range_Units : type units (m_s2);
+  
+  Max_Acc_Range: constant aadlinteger units Physical_Properties::Acc_Range_Units => 2#1#e32 m_s2;
+  
+  Acc_Type : type aadlreal 
+     0.0 m_s2 .. Physical_Properties::Max_Acc_Range units Physical_Properties::Acc_Range_Units;
+  
+  fs_acc_range: Physical_Properties::Acc_Type applies to (device);
+  fs_acc_resolution: Physical_Properties::Acc_Type applies to (device);
+  min_acc_error_margin: Physical_Properties::Acc_Type applies to (device);
+  max_acc_error_margin: Physical_Properties::Acc_Type applies to (device);
+  
+  -- Frequency of Acc,Mag, Gyro
+  Rate_Units : type units (Hz);
+  
+  Max_Rate: constant aadlinteger units Physical_Properties::Rate_Units => 2#1#e32 Hz;
+  
+  Rate_Type : type aadlreal 
+     0.0 Hz .. Physical_Properties::Max_Rate units Physical_Properties::Rate_Units;
+  max_acc_rate: Physical_Properties::Rate_Type applies to (device);
+  max_gyro_rate: Physical_Properties::Rate_Type applies to (device);
+  max_mag_rate: Physical_Properties::Rate_Type applies to (device);
+  
+  
+  -------------------
+  -- MAG PROPERTY --
+  -------------------
+  
+  Mag_Units : type units (
+  mT, T  => mT * 1000);
+  Mag_Range_Units : type units (mT);
+  
+  Max_Mag_Range: constant aadlinteger units Physical_Properties::Mag_Range_Units => 2#1#e32 mT;
+  
+  Mag_Type : type aadlreal 
+     0.0 mT .. Physical_Properties::Max_Mag_Range units Physical_Properties::Mag_Range_Units;
+  
+  fs_mag_range: Physical_Properties::Mag_Type applies to (device);
+  fs_mag_resolution: Physical_Properties::Mag_Type applies to (device);
+  min_mag_error_margin: Physical_Properties::Mag_Type applies to (device);
+  max_mag_error_margin: Physical_Properties::Mag_Type applies to (device);
+  
+  Hybrid_component_Type  : type record (
+		Sw_to_Hw_migration       : aadlstring;
+		Hw_to_SW_migration		 : aadlstring; 
+		Process_integrate        : aadlstring;
+		Thread_integrate         : aadlstring;
+		Group_of_Threads         : aadlstring;
+	);
+	
+	--
+	--  the review will be a list of reviews for any elements.
+	--
+	Hybrid_component : list of Physical_Properties::Hybrid_component_Type applies to (all);
+  
+  
+end Physical_Properties;
