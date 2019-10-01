@@ -53,19 +53,4 @@ subprogram Laser_Start_Acquisition
 		Source_Language => (C);
 end Laser_Start_Acquisition;
 
-
------------------------
--------IMU-------------
------------------------
- device IMU
-  features
-    angle : out data port ;
-    acc   : out data port ;
-    i2c   : requires bus access Buses::I2C::I2C.IMPL;
-  end IMU;
-
-device implementation IMU.impl
-end IMU.impl;
-
-
 end StereoCamAADL_Devices;
