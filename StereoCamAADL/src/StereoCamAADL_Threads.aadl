@@ -10,6 +10,13 @@ thread stereo_img_processing
 		R_camera_img_In: in data port;
 		L_camera_on_off: out event port;
 		R_camera_on_off: out event port;
+	properties
+	    Dispatch_protocol => periodic;
+	    period => 200 ms;
+	    compute_execution_time => 2 ms .. 2 ms;
+	    deadline => 200 ms;
+	    priority => 1;
+	    POSIX_Scheduling_Policy => SCHED_FIFO;	
 end stereo_img_processing;
 
 thread implementation stereo_img_processing.impl
@@ -18,6 +25,14 @@ end stereo_img_processing.impl;
 thread Laser_processing
 	features
 		proc_evt_In: in event port;
+		
+	properties
+	    Dispatch_protocol => periodic;
+	    period => 400 ms;
+	    compute_execution_time => 10 ms .. 20 ms;
+	    deadline => 400 ms;
+	    priority => 2;
+	    POSIX_Scheduling_Policy => SCHED_FIFO;	
 end Laser_processing;
 
 thread implementation Laser_processing.impl

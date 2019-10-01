@@ -5,6 +5,10 @@ public
 
 	with Buses::USB;
 	
+	with Buses::misc;
+	
+	with Electricity_Properties;
+	
 -----------------------
 -------CAMERA----------
 -----------------------
@@ -24,12 +28,24 @@ end camera.impl;
 device laser
 	features
 		Serial_Wire: requires bus access Buses::USB::USB.impl;
+		Supply      :    requires bus access buses::misc::V12_Bus.impl;
 		proc_evt: out event port;
 end laser;
 
 device implementation laser.impl
 	properties
 		Initialize_Entrypoint => classifier (Laser_Initialize);
+		Electricity_Properties::Idle_Current => 10.0 mA;  -- no data
+		Electricity_Properties::Run_Current =>  800.0 mA; --  800 mA nominal
+		Electricity_Properties::Peak_Current => 100.0 mA; -- to measure
+		Electricity_Properties::Core_Voltage => 12.0 V;
+		Electricity_Properties::Acquisition_Time => 1 sec; -- no data, scanning: 100 msec/scan
+		Electricity_Properties::Peak_Time => 1 ms;
+		Electricity_Properties::VIH_min => 2.0 V;
+		Electricity_Properties::VIL_max => 1.0 V;
+		Electricity_Properties::VOH_min => 3.2 V;
+		Electricity_Properties::VOL_max => 0.4 V;
+		Electricity_Properties::Device_Type => Slave;
 end laser.impl;
 
 subprogram Laser_Initialize
