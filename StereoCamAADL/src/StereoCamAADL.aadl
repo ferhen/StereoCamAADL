@@ -8,6 +8,8 @@ public
 	
 	with Processor_Properties;
 	
+	with Memories;
+	
 	with StereoCamAADL_Threads;
 	
 	with StereoCamAADL_Devices;
@@ -26,6 +28,7 @@ public
 			this_usb_3: bus Buses::USB::USB.impl;
 			this_controller: process controller.withThreads;
 			this_controllerLaser: process controllerLaser.withThreads;
+			flash_memory : memory Memories::Flash_Memory.impl {Memory_size => 2 GByte;};
 		connections
 			bus_usb_1_A57: bus access this_usb_1 -> this_A57.usb_bus_1;
 			bus_usb_2_A57: bus access this_usb_2 -> this_A57.usb_bus_2;
@@ -91,8 +94,5 @@ public
 		connections
 			Laser_sensing: port proc_evt_In -> this_thread_laser_processing.proc_evt_In;
 	end controllerLaser.withThreads;
-
-
-
 	
 end StreoCamAADL;

@@ -27,7 +27,7 @@ end camera.impl;
 -----------------------
 device laser
 	features
-		Serial_Wire: requires bus access Buses::USB::USB.impl;
+		Serial_Wire : requires bus access Buses::USB::USB.impl;
 		Supply      :    requires bus access buses::misc::V12_Bus.impl;
 		proc_evt: out event port;
 end laser;
@@ -83,5 +83,6 @@ device implementation GPS.impl
 		Dispatch_Protocol => Periodic;
     	Period => 50 ms; --  50 Hz
 end GPS.impl;
+
 
 end StereoCamAADL_Devices;

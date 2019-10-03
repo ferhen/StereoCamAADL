@@ -38,5 +38,19 @@ end Laser_processing;
 thread implementation Laser_processing.impl
 end Laser_processing.impl;
 	
+
+thread GPS_processing
+	features
+		proc_evt_In: in event port;
+		
+	properties
+	    Dispatch_protocol => periodic;
+	    period => 400 ms;
+	    compute_execution_time => 10 ms .. 20 ms;
+	    deadline => 400 ms;
+	    priority => 2;
+	    POSIX_Scheduling_Policy => SCHED_FIFO;	
+end GPS_processing;
+
 	
 end StereoCamAADL_Threads;
