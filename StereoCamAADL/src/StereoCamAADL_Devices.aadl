@@ -69,4 +69,20 @@ subprogram Laser_Start_Acquisition
 		Source_Language => (C);
 end Laser_Start_Acquisition;
 
+
+-----------------------
+---------GPS-----------
+-----------------------
+abstract GPS
+  features
+    GPS_Out : out data port;
+
+  flows
+    f1 : flow source GPS_Out {latency => 100 us .. 300 us; };		
+
+  properties
+    Dispatch_Protocol => Periodic;
+    Period => 50 ms; --  50 Hz
+end GPS;
+
 end StereoCamAADL_Devices;

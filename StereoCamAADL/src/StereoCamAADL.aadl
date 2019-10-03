@@ -6,7 +6,6 @@ public
 
 	with Buses::USB;
 	
-
 	with Processor_Properties;
 	
 	with StereoCamAADL_Threads;
