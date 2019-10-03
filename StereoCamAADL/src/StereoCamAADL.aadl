@@ -19,8 +19,8 @@ public
 
 	system implementation vantSystem.with_devices
 		subcomponents
-			this_A57: processor A57.impl;
 			this_controller: process controller.withThreads;
+			this_A57: processor A57.impl;
 			this_camera_L: device StereoCamAADL_Devices::camera.impl;
 			this_camera_R: device StereoCamAADL_Devices::camera.impl;
 			this_laser: device StereoCamAADL_Devices::laser;
@@ -42,6 +42,8 @@ public
 			L_cam_img: port this_camera_L.imgOut -> this_controller.L_camera_img_In;
 			R_cam_img: port this_camera_R.imgOut -> this_controller.R_camera_img_In;
 			Laser: port this_laser.proc_evt -> this_controllerLaser.proc_evt_In;
+		properties
+			Actual_Processor_Binding => (reference(this_A57)) applies to this_controller;
 	end vantSystem.with_devices;
 
 -----------------------
@@ -99,4 +101,5 @@ public
 	end controllerLaser.withThreads;
 	
 end StreoCamAADL;
+
 
