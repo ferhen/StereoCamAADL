@@ -12,12 +12,12 @@ thread stereo_img_processing
 		L_camera_on_off: out event port;
 		R_camera_on_off: out event port;
 	properties
-	    Dispatch_protocol => periodic;
-	    period => 100 ms;
-	    compute_execution_time => 2 ms .. 10 ms;
-	    deadline => 100 ms;
-	    priority => 1;
-	    POSIX_Scheduling_Policy => SCHED_FIFO;	--priority based
+		Dispatch_protocol => periodic;
+		period => 100 ms;
+		compute_execution_time => 2 ms .. 10 ms;
+		deadline => 100 ms;
+		priority => 1;
+		POSIX_Scheduling_Policy => SCHED_FIFO;	--priority based
 	    --envia sinal "tira foto" e recebe 2 dado
 	    --gps sd wifi/usb 
 end stereo_img_processing;
@@ -30,12 +30,12 @@ thread Laser_processing
 		proc_evt_In: in event port;
 		
 	properties
-	    Dispatch_protocol => periodic;
-	    period => 400 ms;
-	    compute_execution_time => 10 ms .. 20 ms;
-	    deadline => 400 ms;
-	    priority => 2;
-	    POSIX_Scheduling_Policy => SCHED_FIFO;	
+		Dispatch_protocol => periodic;
+		period => 400 ms;
+		compute_execution_time => 10 ms .. 20 ms;
+		deadline => 400 ms;
+		priority => 2;
+		POSIX_Scheduling_Policy => SCHED_FIFO;	
 end Laser_processing;
 
 thread implementation Laser_processing.impl
@@ -47,13 +47,14 @@ thread GPS_processing
 		proc_evt_In: in event port;
 		
 	properties
-	    Dispatch_protocol => periodic;
-	    period => 400 ms;
-	    compute_execution_time => 10 ms .. 20 ms;
-	    deadline => 400 ms;
-	    priority => 2;
-	    POSIX_Scheduling_Policy => SCHED_FIFO;	
+		Dispatch_protocol => periodic;
+		period => 400 ms;
+		compute_execution_time => 10 ms .. 20 ms;
+		deadline => 400 ms;
+		priority => 2;
+		POSIX_Scheduling_Policy => SCHED_FIFO;	
 end GPS_processing;
 
 	
 end StereoCamAADL_Threads;
+

@@ -1,0 +1,5 @@
+<PROJECT>
+  <AADL path="StereoCamAADL/src/StereoCamAADL_Threads.aadl" enabled="false" opened="true"/>
+  <AADL path="StereoCamAADL/src/StereoCamAADL_Devices.aadl" enabled="false" opened="true"/>
+  <AADL path="StereoCamAADL/src/StereoCamAADL.aadl" enabled="false" opened="true"/>
+</PROJECT>

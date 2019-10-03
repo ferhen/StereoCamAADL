@@ -19,14 +19,15 @@ public
 
 	system implementation vantSystem.with_devices
 		subcomponents
-			this_laser: device StereoCamAADL_Devices::laser;
 			this_A57: processor A57.impl;
+			this_controller: process controller.withThreads;
 			this_camera_L: device StereoCamAADL_Devices::camera.impl;
 			this_camera_R: device StereoCamAADL_Devices::camera.impl;
+			this_laser: device StereoCamAADL_Devices::laser;
+			this_gps: device StereoCamAADL_Devices::GPS;
 			this_usb_1: bus Buses::USB::USB.impl;
 			this_usb_2: bus Buses::USB::USB.impl;
 			this_usb_3: bus Buses::USB::USB.impl;
-			this_controller: process controller.withThreads;
 			this_controllerLaser: process controllerLaser.withThreads;
 			flash_memory : memory Memories::Flash_Memory.impl {Memory_size => 2 GByte;};
 		connections
@@ -71,11 +72,13 @@ public
 			R_camera_img_In: in data port;
 			L_camera_on_off: out event port;
 			R_camera_on_off: out event port;
-	end controller;
+	end controller;		
 
 	process implementation controller.withThreads
 		subcomponents
 			this_thread_img_processing: thread StereoCamAADL_Threads::stereo_img_processing.impl;
+			this_thread_laser_processing: thread StereoCamAADL_Threads::Laser_processing;
+			this_thread_gps_processing: thread StereoCamAADL_Threads::GPS_processing;
 		connections
 			L_cam_on_off: port this_thread_img_processing.L_camera_on_off -> L_camera_on_off;
 			R_cam_on_off: port this_thread_img_processing.R_camera_on_off -> R_camera_on_off;
@@ -96,3 +99,4 @@ public
 	end controllerLaser.withThreads;
 	
 end StreoCamAADL;
+
