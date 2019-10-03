@@ -1,6 +1,7 @@
 package StereoCamAADL_Threads
 public
 	
+	
 -----------------------
 -------THREADS---------
 -----------------------
@@ -12,11 +13,13 @@ thread stereo_img_processing
 		R_camera_on_off: out event port;
 	properties
 	    Dispatch_protocol => periodic;
-	    period => 200 ms;
-	    compute_execution_time => 2 ms .. 2 ms;
-	    deadline => 200 ms;
+	    period => 100 ms;
+	    compute_execution_time => 2 ms .. 10 ms;
+	    deadline => 100 ms;
 	    priority => 1;
-	    POSIX_Scheduling_Policy => SCHED_FIFO;	
+	    POSIX_Scheduling_Policy => SCHED_FIFO;	--priority based
+	    --envia sinal "tira foto" e recebe 2 dado
+	    --gps sd wifi/usb 
 end stereo_img_processing;
 
 thread implementation stereo_img_processing.impl
