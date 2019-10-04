@@ -21,13 +21,6 @@
       <position y="48.0"/>
     </element>
     <element uuid="62901277-875c-4b9e-89ce-f9682e9368e5" manual="true">
-      <element uuid="bdb530ac-9b5d-494a-bcb8-57fff86e2501" manual="true" dockArea="left">
-        <bo>
-          <seg>feature</seg>
-          <seg>laser_data_in</seg>
-        </bo>
-        <position y="110.0"/>
-      </element>
       <element uuid="238c73d9-cf8d-45f1-aa76-83159c84cd4a" manual="true" dockArea="left">
         <bo>
           <seg>feature</seg>
