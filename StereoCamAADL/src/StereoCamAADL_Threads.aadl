@@ -12,10 +12,6 @@ thread data_saver
 		r_camera_img_in: in data port StereoCamAADL_Data::camera_image.impl;
 		gps_data_in: in data port StereoCamAADL_Data::gps_data.impl;
 		laser_data_in: in data port StereoCamAADL_Data::laser_data.impl;
-		l_camera_img_out: out data port StereoCamAADL_Data::camera_image.impl;
-		r_camera_img_out: out data port StereoCamAADL_Data::camera_image.impl;
-		gps_data_out: out data port StereoCamAADL_Data::gps_data.impl;
-		laser_data_out: out data port StereoCamAADL_Data::laser_data.impl;
 		flash_mem_data_out: out data port StereoCamAADL_Data::flash_mem_data.impl;
 	properties
 		Dispatch_protocol => periodic;
@@ -33,9 +29,7 @@ end data_saver.impl;
 
 thread stereo_img_collector
 	features
-		cameras_trigger: out event port;
-		l_camera_img_in: in data port StereoCamAADL_Data::camera_image.impl;
-		r_camera_img_in: in data port StereoCamAADL_Data::camera_image.impl;
+		cameras_trigger: in event port;
 		l_camera_img_out: out data port StereoCamAADL_Data::camera_image.impl;
 		r_camera_img_out: out data port StereoCamAADL_Data::camera_image.impl;
 	properties
@@ -55,7 +49,6 @@ end stereo_img_collector.impl;
 thread laser_data_collector
 	features
 		laser_trigger: in event port;
-		laser_data_in: in data port StereoCamAADL_Data::laser_data.impl;
 		laser_data_out: out data port StereoCamAADL_Data::laser_data.impl;
 	properties
 		Dispatch_protocol => periodic;
@@ -74,7 +67,6 @@ end laser_data_collector.impl;
 thread gps_data_collector
 	features
 		gps_trigger: in event port;
-		gps_data_in: in data port StereoCamAADL_Data::gps_data.impl;
 		gps_data_out: out data port StereoCamAADL_Data::gps_data.impl;
 	properties
 		Dispatch_protocol => periodic;
@@ -92,7 +84,6 @@ end gps_data_collector.impl;
 
 thread wifi_control_data_collector
 	features
-		control_data_trigger: out event port;
 		control_data: in data port StereoCamAADL_Data::control_data.impl;
 	properties
 		Dispatch_protocol => periodic;
@@ -112,8 +103,6 @@ thread wifi_video_data_sender
 	features
 		l_camera_img_in: in data port StereoCamAADL_Data::camera_image.impl;
 		r_camera_img_in: in data port StereoCamAADL_Data::camera_image.impl;
-		l_camera_img_out: out data port StereoCamAADL_Data::camera_image.impl;
-		r_camera_img_out: out data port StereoCamAADL_Data::camera_image.impl;
 	properties
 		Dispatch_protocol => periodic;
 		period => 100 ms;

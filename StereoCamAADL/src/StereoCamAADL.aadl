@@ -13,6 +13,8 @@ public
 	with StereoCamAADL_Threads;
 	
 	with StereoCamAADL_Devices;
+	
+	with StereoCamAADL_Data;
 
 	system vantSystem
 	end vantSystem;
@@ -37,8 +39,6 @@ public
 			bus_usb_1_cam_l: bus access this_usb_1 -> this_camera_l.usbPort;
 			bus_usb_2_cam_r: bus access this_usb_2 -> this_camera_r.usbPort;
 			bus_usb_3_laser: bus access this_usb_3 -> this_laser.Serial_Wire;
-			l_cam_on_off: port this_controller.l_camera_on_off -> this_camera_l.camera_on_off;
-			r_cam_on_off: port this_controller.r_camera_on_off -> this_camera_r.camera_on_off;
 			l_cam_img: port this_camera_l.imgOut -> this_controller.l_camera_img_in;
 			r_cam_img: port this_camera_r.imgOut -> this_controller.r_camera_img_in;
 			laser: port this_laser.proc_evt -> this_controllerLaser.proc_evt_In;
@@ -70,22 +70,21 @@ public
 -----------------------
 	process controller
 		features
-			l_camera_img_in: in data port;
-			r_camera_img_in: in data port;
-			l_camera_on_off: out event port;
-			r_camera_on_off: out event port;
+			l_camera_img_in: in data port StereoCamAADL_Data::camera_image.impl;
+			r_camera_img_in: in data port StereoCamAADL_Data::camera_image.impl;
 	end controller;		
 
 	process implementation controller.withThreads
 		subcomponents
-			this_thread_img_processing: thread StereoCamAADL_Threads::stereo_img_collector.impl;
-			this_thread_laser_processing: thread StereoCamAADL_Threads::laser_data_collector;
-			this_thread_gps_processing: thread StereoCamAADL_Threads::gps_data_collector;
+			data_saver_thread: thread StereoCamAADL_Threads::data_saver.impl;
+			stereo_img_collector_thread: thread StereoCamAADL_Threads::stereo_img_collector.impl;
+			laser_data_collector_thread: thread StereoCamAADL_Threads::laser_data_collector;
+			gps_data_collector_thread: thread StereoCamAADL_Threads::gps_data_collector;
+			wifi_control_data_collector_thread: thread StereoCamAADL_Threads::wifi_control_data_collector.impl;
+			wifi_video_data_sender_thread: thread StereoCamAADL_Threads::wifi_video_data_sender.impl;
 		connections
-			--L_cam_on_off: port this_thread_img_processing.L_camera_on_off -> L_camera_on_off;
-			--R_cam_on_off: port this_thread_img_processing.R_camera_on_off -> R_camera_on_off;
-			l_cam_img: port l_camera_img_in -> this_thread_img_processing.l_camera_img_in;
-			r_cam_img: port r_camera_img_in -> this_thread_img_processing.r_camera_img_in;
+			l_cam_img: port l_camera_img_in -> stereo_img_collector_thread.l_camera_img_in;
+			r_cam_img: port r_camera_img_in -> stereo_img_collector_thread.r_camera_img_in;
 	end controller.withThreads;
 
 	process controllerLaser
