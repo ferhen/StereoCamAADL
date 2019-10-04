@@ -1,5 +1,61 @@
 <?xml version="1.0" encoding="ASCII"?>
 <diagram:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:diagram="http://osate.org/diagram" formatVersion="7">
+  <element uuid="549910cb-75fd-4085-8852-5de861c838cd" manual="true">
+    <element uuid="e04a51d7-623f-4107-a289-3c54a92bf068" manual="true">
+      <element uuid="e0be9c76-3f74-4cf9-82ca-7c7a7b66baaf" manual="true">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>laser_sensing</seg>
+      </bo>
+    </element>
+    <element uuid="b4e6a1f3-0773-4abd-8c7c-cdc782c40fda" manual="true" dockArea="left">
+      <bo>
+        <seg>feature</seg>
+        <seg>proc_evt_in</seg>
+      </bo>
+      <position y="48.0"/>
+    </element>
+    <element uuid="62901277-875c-4b9e-89ce-f9682e9368e5" manual="true">
+      <element uuid="bdb530ac-9b5d-494a-bcb8-57fff86e2501" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>laser_data_in</seg>
+        </bo>
+        <position y="110.0"/>
+      </element>
+      <element uuid="238c73d9-cf8d-45f1-aa76-83159c84cd4a" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>laser_data_out</seg>
+        </bo>
+        <position y="60.0"/>
+      </element>
+      <element uuid="79178d1f-39c3-4109-ae3b-7b3014c45d57" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>laser_trigger</seg>
+        </bo>
+        <position y="10.0"/>
+      </element>
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>this_thread_laser_processing</seg>
+      </bo>
+      <position x="103.0" y="38.0"/>
+      <size width="479.0" height="160.0"/>
+    </element>
+    <bo>
+      <seg>classifier</seg>
+      <seg>controllerlaser.withthreads</seg>
+    </bo>
+    <position x="12.0" y="12.0"/>
+    <size width="594.0" height="210.0"/>
+  </element>
   <config type="structure" connectionPrimaryLabelsVisible="false">
     <enabledAadlProperties/>
     <context>

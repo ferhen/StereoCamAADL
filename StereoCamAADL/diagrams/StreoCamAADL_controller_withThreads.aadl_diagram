@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="ASCII"?>
 <diagram:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:diagram="http://osate.org/diagram" formatVersion="7">
-  <element uuid="d96c4d96-13a9-4d2d-b567-238836b29317" manual="true">
-    <element uuid="5c32836b-c369-4220-b8bd-376f562acfd1" manual="true">
-      <element uuid="e5ed168a-0295-45e2-afa8-07017cffc71a" manual="true">
+  <element uuid="3044293c-daf9-4682-a251-47031d051705" manual="true">
+    <element uuid="d89ac608-a52b-4f0a-a809-9cb3a6e4f193" manual="true">
+      <element uuid="d063f02b-edb5-4d8d-b6af-b9b14f5e258e" manual="true">
         <bo>
           <seg>tag</seg>
           <seg>unidirectional</seg>
@@ -13,8 +13,8 @@
         <seg>l_cam_img</seg>
       </bo>
     </element>
-    <element uuid="9fd1fcca-24c9-4ae6-b6fa-3b77aee2810e" manual="true">
-      <element uuid="da424391-4807-4ab6-ba7d-83c1234523b9" manual="true">
+    <element uuid="e4c89a9d-8606-47b6-8b47-b631752f43d6" manual="true">
+      <element uuid="76b12b5f-c5d1-4501-b8e8-9982a8bfd69d" manual="true">
         <bo>
           <seg>tag</seg>
           <seg>unidirectional</seg>
@@ -25,50 +25,50 @@
         <seg>r_cam_img</seg>
       </bo>
     </element>
-    <element uuid="60b8cebb-2fb7-4c22-82f0-210c444e3919" manual="true" dockArea="left">
+    <element uuid="1878c7e2-b201-416f-b162-cdc4d693794e" manual="true" dockArea="left">
       <bo>
         <seg>feature</seg>
         <seg>l_camera_img_in</seg>
       </bo>
       <position y="98.0"/>
     </element>
-    <element uuid="efe41bfd-d99a-464b-814b-f338d33097e5" manual="true" dockArea="left">
+    <element uuid="8d282265-0648-4a97-8f79-29f6b1596ecf" manual="true" dockArea="left">
       <bo>
         <seg>feature</seg>
         <seg>l_camera_on_off</seg>
       </bo>
       <position y="318.0"/>
     </element>
-    <element uuid="cb4ec57c-6567-4220-a5b4-87bd14f83523" manual="true" dockArea="left">
+    <element uuid="45608145-9d76-44ca-b9d6-dac6033eb2d9" manual="true" dockArea="left">
       <bo>
         <seg>feature</seg>
         <seg>r_camera_img_in</seg>
       </bo>
       <position y="48.0"/>
     </element>
-    <element uuid="bcbd6093-a83d-43a5-ae9d-9e5a1a4051e2" manual="true" dockArea="left">
+    <element uuid="6fae5b2d-52f9-4d5f-bc4b-922b1b61e0f9" manual="true" dockArea="left">
       <bo>
         <seg>feature</seg>
         <seg>r_camera_on_off</seg>
       </bo>
       <position y="378.0"/>
     </element>
-    <element uuid="580671e0-981a-4e54-82bb-0cf910d9e945" manual="true">
-      <element uuid="72c4028a-31fb-4637-be76-20007b0269c0" manual="true" dockArea="left">
+    <element uuid="a43b21b2-b923-4fff-b6d3-f9dfb49d26ff" manual="true">
+      <element uuid="d734b45b-d0a4-4eeb-a9c4-4d86f0d28394" manual="true" dockArea="left">
         <bo>
           <seg>feature</seg>
           <seg>gps_data_in</seg>
         </bo>
         <position y="110.0"/>
       </element>
-      <element uuid="6cd6ff5c-2676-4617-9bf3-bdf597f0ca49" manual="true" dockArea="left">
+      <element uuid="f107fede-edcd-4630-b1f1-01da6427ee9d" manual="true" dockArea="left">
         <bo>
           <seg>feature</seg>
           <seg>gps_data_out</seg>
         </bo>
         <position y="10.0"/>
       </element>
-      <element uuid="e160633b-8930-486f-ab85-ddd7db8c76e7" manual="true" dockArea="left">
+      <element uuid="c87e0aa8-52e0-4301-b29d-2c4206d47b0a" manual="true" dockArea="left">
         <bo>
           <seg>feature</seg>
           <seg>gps_trigger</seg>
@@ -82,65 +82,65 @@
       <position x="682.0" y="218.0"/>
       <size width="450.0" height="160.0"/>
     </element>
-    <element uuid="ddc40591-807e-4501-8700-ac86e5df72cb" manual="true">
-      <element uuid="22f4fa87-b621-430a-b619-06eeef63f3d6" manual="true" dockArea="left">
+    <element uuid="c62bc871-a4bc-4031-893e-6cea14b8614e" manual="true">
+      <element uuid="53192344-2929-4926-868d-efec02d41093" manual="true" dockArea="left">
         <bo>
           <seg>feature</seg>
           <seg>cameras_trigger</seg>
         </bo>
         <position y="210.0"/>
       </element>
-      <element uuid="61496171-b0d7-4937-8bfb-49334c6992e2" manual="true" dockArea="left">
+      <element uuid="a91bca6f-09c6-4727-8ff8-129ba36729c4" manual="true" dockArea="left">
         <bo>
           <seg>feature</seg>
           <seg>l_camera_img_in</seg>
         </bo>
         <position y="60.0"/>
       </element>
-      <element uuid="10d56372-468a-4de1-a88f-5d03d3e67f24" manual="true" dockArea="right">
+      <element uuid="85aa1768-16f6-4d62-87cd-4507ea5f579d" manual="true" dockArea="left">
         <bo>
           <seg>feature</seg>
           <seg>l_camera_img_out</seg>
         </bo>
-        <position x="386.0" y="99.0"/>
+        <position y="110.0"/>
       </element>
-      <element uuid="94013fe3-0517-42d9-bd55-fc9e993496dd" manual="true" dockArea="left">
+      <element uuid="ff37dc1b-4399-4787-9adf-7c74133d8cdc" manual="true" dockArea="left">
         <bo>
           <seg>feature</seg>
           <seg>r_camera_img_in</seg>
         </bo>
         <position y="10.0"/>
       </element>
-      <element uuid="916d5f04-0592-479c-a581-6aa0c8938cfc" manual="true" dockArea="right">
+      <element uuid="95858f28-095c-4091-b08b-39b6cf3eccd6" manual="true" dockArea="left">
         <bo>
           <seg>feature</seg>
           <seg>r_camera_img_out</seg>
         </bo>
-        <position x="385.0" y="144.0"/>
+        <position y="160.0"/>
       </element>
       <bo>
         <seg>subcomponent</seg>
         <seg>this_thread_img_processing</seg>
       </bo>
-      <position x="161.0" y="38.0"/>
+      <position x="140.0" y="38.0"/>
       <size width="522.0" height="260.0"/>
     </element>
-    <element uuid="133661da-cc94-481c-9cb4-e69a37a48103" manual="true">
-      <element uuid="1fa7e29a-cfd9-4541-bfd5-59536bb01d0a" manual="true" dockArea="left">
+    <element uuid="62993d1b-3c88-4ca2-9578-104f46874cb1" manual="true">
+      <element uuid="619f7b9b-a829-4fd1-a282-bf200b89f8e2" manual="true" dockArea="left">
         <bo>
           <seg>feature</seg>
           <seg>laser_data_in</seg>
         </bo>
         <position y="110.0"/>
       </element>
-      <element uuid="ece31cec-b769-4d9b-9f57-cb279d25396c" manual="true" dockArea="left">
+      <element uuid="3598a596-1754-4cf5-994e-5e0ec3951dd6" manual="true" dockArea="left">
         <bo>
           <seg>feature</seg>
           <seg>laser_data_out</seg>
         </bo>
         <position y="10.0"/>
       </element>
-      <element uuid="3007c959-55d8-4080-9c58-fb2f7e53715b" manual="true" dockArea="left">
+      <element uuid="3faca03d-3138-4d86-b46e-f93de1fc028b" manual="true" dockArea="left">
         <bo>
           <seg>feature</seg>
           <seg>laser_trigger</seg>
