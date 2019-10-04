@@ -13,9 +13,9 @@
         <seg>bus_usb_1_a57</seg>
       </bo>
       <bendpoints>
-        <point x="421.0" y="922.0"/>
-        <point x="457.0" y="922.0"/>
-        <point x="457.0" y="912.0"/>
+        <point x="449.0" y="920.0"/>
+        <point x="485.0" y="920.0"/>
+        <point x="485.0" y="910.0"/>
       </bendpoints>
     </element>
     <element uuid="1fe081ff-02d3-4f95-9a4c-22c216a49a45" manual="true">
@@ -30,9 +30,9 @@
         <seg>bus_usb_1_cam_l</seg>
       </bo>
       <bendpoints>
-        <point x="421.0" y="910.3333333333333"/>
-        <point x="447.0" y="910.3333333333333"/>
-        <point x="447.0" y="682.0"/>
+        <point x="449.0" y="908.0"/>
+        <point x="475.0" y="908.0"/>
+        <point x="475.0" y="680.0"/>
       </bendpoints>
     </element>
     <element uuid="23112dbf-d87e-4fed-aad5-9afada810e7f" manual="true">
@@ -47,9 +47,9 @@
         <seg>bus_usb_2_a57</seg>
       </bo>
       <bendpoints>
-        <point x="421.0" y="867.0"/>
-        <point x="457.0" y="867.0"/>
-        <point x="457.0" y="862.0"/>
+        <point x="449.0" y="865.0"/>
+        <point x="485.0" y="865.0"/>
+        <point x="485.0" y="860.0"/>
       </bendpoints>
     </element>
     <element uuid="49c71215-a2e5-4ecd-979c-b592bfe81e1f" manual="true">
@@ -64,9 +64,9 @@
         <seg>bus_usb_2_cam_r</seg>
       </bo>
       <bendpoints>
-        <point x="421.0" y="855.3333333333333"/>
-        <point x="437.0" y="855.3333333333333"/>
-        <point x="437.0" y="502.0"/>
+        <point x="449.0" y="853.0"/>
+        <point x="465.0" y="853.0"/>
+        <point x="465.0" y="500.0"/>
       </bendpoints>
     </element>
     <element uuid="90f28ffa-96a5-43b0-987c-109133857fc0" manual="true">
@@ -81,7 +81,7 @@
         <seg>bus_usb_3_a57</seg>
       </bo>
       <bendpoints>
-        <point x="417.0" y="812.0"/>
+        <point x="445.0" y="810.0"/>
       </bendpoints>
     </element>
     <element uuid="897960c6-0de9-4c0f-8795-2258d037a735" manual="true">
@@ -96,9 +96,9 @@
         <seg>bus_usb_3_laser</seg>
       </bo>
       <bendpoints>
-        <point x="421.0" y="800.3333333333333"/>
-        <point x="427.0" y="800.3333333333333"/>
-        <point x="427.0" y="272.0"/>
+        <point x="449.0" y="798.0"/>
+        <point x="455.0" y="798.0"/>
+        <point x="455.0" y="270.0"/>
       </bendpoints>
     </element>
     <element uuid="26cc34d8-8218-4a51-812e-c6c050d9533e" manual="true">
@@ -113,8 +113,8 @@
         <seg>gps_trigger</seg>
       </bo>
       <bendpoints>
-        <point x="427.0" y="147.0"/>
-        <point x="427.0" y="92.0"/>
+        <point x="455.0" y="145.0"/>
+        <point x="455.0" y="90.0"/>
       </bendpoints>
     </element>
     <element uuid="22c0138a-7e62-449d-937e-a74f31c6b8f2" manual="true">
@@ -129,8 +129,8 @@
         <seg>l_cam_trigger</seg>
       </bo>
       <bendpoints>
-        <point x="447.0" y="297.0"/>
-        <point x="447.0" y="632.0"/>
+        <point x="475.0" y="295.0"/>
+        <point x="475.0" y="630.0"/>
       </bendpoints>
     </element>
     <element uuid="5f2c53a1-c875-44f5-8ba7-97413d8030b0" manual="true">
@@ -157,8 +157,8 @@
         <seg>r_cam_trigger</seg>
       </bo>
       <bendpoints>
-        <point x="447.0" y="297.0"/>
-        <point x="447.0" y="452.0"/>
+        <point x="475.0" y="295.0"/>
+        <point x="475.0" y="450.0"/>
       </bendpoints>
     </element>
     <element uuid="c465337a-6d60-4cd0-b087-8b5d4490e9f1" manual="true">
@@ -263,12 +263,12 @@
         </bo>
         <position x="272.0" y="185.0"/>
       </element>
-      <element uuid="75c6a01e-254a-4db0-8209-06291741b0e8" manual="true" dockArea="left">
+      <element uuid="75c6a01e-254a-4db0-8209-06291741b0e8" manual="true" dockArea="bottom">
         <bo>
           <seg>feature</seg>
           <seg>control_data</seg>
         </bo>
-        <position y="60.0"/>
+        <position x="148.0" y="236.0"/>
       </element>
       <element uuid="cd3398d5-8312-4b8a-87b6-c63c92f01cd8" manual="true" dockArea="left">
         <bo>
@@ -405,7 +405,7 @@
       <seg>classifier</seg>
       <seg>vantsystem.with_devices</seg>
     </bo>
-    <position x="12.0" y="12.0"/>
+    <position x="40.0" y="10.0"/>
     <size width="850.0" height="980.0"/>
   </element>
   <config type="structure" connectionPrimaryLabelsVisible="false">

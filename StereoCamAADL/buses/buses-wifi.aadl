@@ -1,0 +1,11 @@
+package buses::wifi
+public
+	
+	  bus wifi
+  end wifi;
+
+  bus implementation wifi.impl
+  end wifi.impl;
+	
+	
+end buses::wifi;
