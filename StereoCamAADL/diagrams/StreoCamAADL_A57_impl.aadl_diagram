@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="ASCII"?>
 <diagram:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:diagram="http://osate.org/diagram" formatVersion="7">
-  <element uuid="c8ee04b3-3565-4b1d-a36b-7e6051ba17f2" manual="true">
-    <element uuid="167f386a-545f-457e-bf0d-f5a9cde0790c" manual="true" dockArea="left">
+  <element uuid="f4e1d04c-0784-45cc-af0f-71befd1f531f" manual="true">
+    <element uuid="39580b9b-8cc4-496c-8f25-cab7bcd90a6a" manual="true" dockArea="left">
       <bo>
         <seg>feature</seg>
         <seg>ethernet</seg>
       </bo>
       <position y="110.0"/>
     </element>
-    <element uuid="b6eaec33-4910-4a83-8bdb-8796ca6e81fd" manual="true" dockArea="left">
+    <element uuid="e92492f1-262a-496d-b991-20e3734e1951" manual="true" dockArea="left">
       <bo>
         <seg>feature</seg>
         <seg>i2c_bus</seg>
       </bo>
       <position y="60.0"/>
     </element>
-    <element uuid="7615d744-eadf-48d9-801c-6633323d0d48" manual="true" dockArea="left">
+    <element uuid="5918dc46-0e42-49fd-b77b-bc457e3236e0" manual="true" dockArea="left">
       <bo>
         <seg>feature</seg>
         <seg>usb_bus_1</seg>
       </bo>
       <position y="160.0"/>
     </element>
-    <element uuid="e2bd6f2d-c533-4842-84b9-70cdc6812dc3" manual="true" dockArea="left">
+    <element uuid="4920ad9e-f863-4284-9982-3d31b30cb011" manual="true" dockArea="left">
       <bo>
         <seg>feature</seg>
         <seg>usb_bus_2</seg>
@@ -31,16 +31,16 @@
     </element>
     <bo>
       <seg>classifier</seg>
-      <seg>a57</seg>
+      <seg>a57.impl</seg>
     </bo>
     <position x="12.0" y="12.0"/>
-    <size width="249.0" height="210.0"/>
+    <size width="281.0" height="210.0"/>
   </element>
   <config type="structure" connectionPrimaryLabelsVisible="false">
     <enabledAadlProperties/>
     <context>
       <seg>classifier</seg>
-      <seg>streocamaadl::a57</seg>
+      <seg>streocamaadl::a57.impl</seg>
     </context>
   </config>
 </diagram:Diagram>
