@@ -16,15 +16,15 @@ public
 		features
 			usbPort: requires bus access Buses::USB::USB.impl;
 			imgOut: out data port StereoCamAADL_Data::camera_image.impl;
-			camera_trigger: in event port;
+			camera_trigger: out event port;
 	end camera;
 
 	device implementation camera.impl
 	end camera.impl;
 
-		-----------------------
-		-------LASER-----------
-		-----------------------
+	-----------------------
+	-------LASER-----------
+	-----------------------
 	device laser
 		features
 			Serial_Wire: requires bus access Buses::Ethernet::Ethernet.impl;
@@ -37,12 +37,13 @@ public
 
 
 
-		-----------------------
-		---------GPS-----------
-		-----------------------
+	-----------------------
+	---------GPS-----------
+	-----------------------
 	device GPS
 		features
-			GPS_Out: out data port;
+			gps_trigger: out event port;
+			gps_out: out data port;
 	end GPS;
 
 	device implementation GPS.impl
