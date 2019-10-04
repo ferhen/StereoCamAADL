@@ -16,6 +16,10 @@ public
 
 	with Buses::UART;
 
+	with Buses::wifi;
+	
+	with Buses::Misc;
+
 	system vantSystem
 	end vantSystem;
 
@@ -25,21 +29,29 @@ public
 			this_A57: processor A57.impl;
 			this_camera_L: device StereoCamAADL_Devices::camera.impl;
 			this_camera_R: device StereoCamAADL_Devices::camera.impl;
-			this_laser: device StereoCamAADL_Devices::laser;
-			this_gps: device StereoCamAADL_Devices::GPS;
+			this_laser: device StereoCamAADL_Devices::laser.impl;
+			this_gps: device StereoCamAADL_Devices::GPS.impl;
+			this_sd_card: device StereoCamAADL_Devices::SDcard.impl;
+			this_remote_control: device StereoCamAADL_Devices::remote_control.impl;
 			this_usb_1: bus Buses::USB::USB.impl;
 			this_usb_2: bus Buses::USB::USB.impl;
 			this_ethernet: bus Buses::Ethernet::Ethernet.impl;
 			this_uart: bus Buses::UART::UART.impl;
+			this_sd_bus: bus Buses::Misc::generic_bus.impl;
+			this_wifi: bus buses::wifi::wifi.impl;
 		connections
 			bus_usb_1_A57: bus access this_usb_1 -> this_A57.usb_bus_1;
 			bus_usb_2_A57: bus access this_usb_2 -> this_A57.usb_bus_2;
 			bus_ethernet_A57: bus access this_ethernet -> this_A57.ethernet;
 			bus_uart_A57: bus access this_uart -> this_A57.uart_bus;
+			bus_sd_A57: bus access this_sd_bus -> this_A57.sd_bus;
+			bus_wifi_A57: bus access this_wifi -> this_A57.wifi_bus;
 			bus_usb_1_cam_l: bus access this_usb_1 -> this_camera_l.usbPort;
 			bus_usb_2_cam_r: bus access this_usb_2 -> this_camera_r.usbPort;
 			bus_ethernet_laser: bus access this_ethernet -> this_laser.Serial_Wire;
 			bus_uart_gps: bus access this_uart -> this_gps.gps_bus;
+			bus_sd: bus access this_sd_bus -> this_sd_card.bus_access;
+			bus_wifi_remote_control: bus access this_wifi -> this_remote_control.bus_access;
 			l_cam_trigger: port this_controller.cameras_trigger -> this_camera_l.camera_trigger;
 			r_cam_trigger: port this_controller.cameras_trigger -> this_camera_r.camera_trigger;
 			l_cam_img: port this_camera_L.imgOut -> this_controller.l_cam_img_in;
@@ -48,6 +60,10 @@ public
 			laser_data: port this_laser.laser_data_out -> this_controller.laser_data;
 			gps_trigger: port this_controller.gps_trigger -> this_gps.gps_trigger;
 			gps_data: port this_gps.gps_data_out -> this_controller.gps_data;
+			sd_data: port this_controller.flash_mem_out -> this_sd_card.data_in;
+			control_data: port this_remote_control.control_out -> this_controller.control_data;
+			l_cam_img_out: port this_controller.l_cam_img_out -> this_remote_control.l_camera_img_in;
+			r_cam_img_out: port this_controller.r_cam_img_out -> this_remote_control.r_camera_img_in;
 		properties
 			Actual_Processor_Binding => (reference (this_A57)) applies to this_controller;
 	end vantSystem.with_devices;
@@ -61,6 +77,8 @@ public
 			usb_bus_1: requires bus access Buses::USB::USB.impl;
 			usb_bus_2: requires bus access Buses::USB::USB.impl;
 			ethernet: requires bus access Buses::Ethernet::Ethernet.impl;
+			sd_bus: requires bus access Buses::Misc::generic_bus.impl;
+			wifi_bus: requires bus access Buses::wifi::wifi.impl;
 		properties
 			Processor_Properties::Processor_Frequency => 1430 Mhz;
 			Scheduling_Protocol => (POSIX_1003_HIGHEST_PRIORITY_FIRST_PROTOCOL);

@@ -10,6 +10,8 @@ public
 
 	with Buses::UART;
 
+	with buses::wifi;
+
 	-----------------------
 	-------CAMERA----------
 	-----------------------
@@ -50,7 +52,7 @@ public
 	device implementation GPS.impl
 		properties
 			Dispatch_Protocol => Periodic;
-			Period => 50ms; --  50 Hz
+			Period => 50ms;
 	end GPS.impl;
 
 	-----------------------
@@ -65,8 +67,25 @@ public
 	device implementation SDcard.impl
 		properties
 			Dispatch_Protocol => Periodic;
-			Period => 50ms; --  50 Hz
+			Period => 50ms;
 	end SDcard.impl;
+
+	-----------------------
+	----REMOTE CONTROL-----
+	-----------------------
+	device remote_control
+		features
+			control_out: out data port StereoCamAADL_Data::control_data.impl;
+			l_camera_img_in: in data port StereoCamAADL_Data::camera_image.impl;
+			r_camera_img_in: in data port StereoCamAADL_Data::camera_image.impl;
+			bus_access: requires bus access buses::wifi::wifi.impl;
+	end remote_control;
+
+	device implementation remote_control.impl
+		properties
+			Dispatch_Protocol => Periodic;
+			Period => 100ms;
+	end remote_control.impl;
 	
 
 
