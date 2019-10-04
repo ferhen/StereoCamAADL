@@ -1,34 +1,62 @@
 package StereoCamAADL_Threads
 public
 	
-	
+	with StereoCamAADL_Data;
+
 -----------------------
 -------THREADS---------
 -----------------------
-thread stereo_img_processing
+thread data_saver
 	features
-		L_camera_img_In: in data port;
-		R_camera_img_In: in data port;
-		L_camera_on_off: out event port;
-		R_camera_on_off: out event port;
+		l_camera_img_in: in data port StereoCamAADL_Data::camera_image.impl;
+		r_camera_img_in: in data port StereoCamAADL_Data::camera_image.impl;
+		gps_data_in: in data port StereoCamAADL_Data::gps_data.impl;
+		laser_data_in: in data port StereoCamAADL_Data::laser_data.impl;
+		l_camera_img_out: out data port StereoCamAADL_Data::camera_image.impl;
+		r_camera_img_out: out data port StereoCamAADL_Data::camera_image.impl;
+		gps_data_out: out data port StereoCamAADL_Data::gps_data.impl;
+		laser_data_out: out data port StereoCamAADL_Data::laser_data.impl;
+		flash_mem_data_out: out data port StereoCamAADL_Data::flash_mem_data.impl;
 	properties
 		Dispatch_protocol => periodic;
 		period => 100 ms;
 		compute_execution_time => 2 ms .. 10 ms;
 		deadline => 100 ms;
 		priority => 1;
-		POSIX_Scheduling_Policy => SCHED_FIFO;	--priority based
-	    --envia sinal "tira foto" e recebe 2 dado
-	    --gps sd wifi/usb 
-end stereo_img_processing;
+		POSIX_Scheduling_Policy => SCHED_RR;	--priority based
+end data_saver;
 
-thread implementation stereo_img_processing.impl
-end stereo_img_processing.impl;
+thread implementation data_saver.impl
+end data_saver.impl;
 
-thread Laser_processing
+
+
+thread stereo_img_collector
 	features
-		proc_evt_In: in event port;
-		
+		cameras_trigger: out event port;
+		l_camera_img_in: in data port StereoCamAADL_Data::camera_image.impl;
+		r_camera_img_in: in data port StereoCamAADL_Data::camera_image.impl;
+		l_camera_img_out: out data port StereoCamAADL_Data::camera_image.impl;
+		r_camera_img_out: out data port StereoCamAADL_Data::camera_image.impl;
+	properties
+		Dispatch_protocol => periodic;
+		period => 100 ms;
+		compute_execution_time => 2 ms .. 10 ms;
+		deadline => 100 ms;
+		priority => 1;
+		POSIX_Scheduling_Policy => SCHED_RR;	--priority based
+end stereo_img_collector;
+
+thread implementation stereo_img_collector.impl
+end stereo_img_collector.impl;
+
+
+
+thread laser_data_collector
+	features
+		laser_trigger: in event port;
+		laser_data_in: in data port StereoCamAADL_Data::laser_data.impl;
+		laser_data_out: out data port StereoCamAADL_Data::laser_data.impl;
 	properties
 		Dispatch_protocol => periodic;
 		period => 400 ms;
@@ -36,16 +64,18 @@ thread Laser_processing
 		deadline => 400 ms;
 		priority => 2;
 		POSIX_Scheduling_Policy => SCHED_FIFO;	
-end Laser_processing;
+end laser_data_collector;
 
-thread implementation Laser_processing.impl
-end Laser_processing.impl;
+thread implementation laser_data_collector.impl
+end laser_data_collector.impl;
 	
 
-thread GPS_processing
+
+thread gps_data_collector
 	features
-		proc_evt_In: in event port;
-		
+		gps_trigger: in event port;
+		gps_data_in: in data port StereoCamAADL_Data::gps_data.impl;
+		gps_data_out: out data port StereoCamAADL_Data::gps_data.impl;
 	properties
 		Dispatch_protocol => periodic;
 		period => 400 ms;
@@ -53,7 +83,48 @@ thread GPS_processing
 		deadline => 400 ms;
 		priority => 2;
 		POSIX_Scheduling_Policy => SCHED_FIFO;	
-end GPS_processing;
+end gps_data_collector;
+
+thread implementation gps_data_collector.impl
+end gps_data_collector.impl;
+
+
+
+thread wifi_control_data_collector
+	features
+		control_data_trigger: out event port;
+		control_data: in data port StereoCamAADL_Data::control_data.impl;
+	properties
+		Dispatch_protocol => periodic;
+		period => 400 ms;
+		compute_execution_time => 10 ms .. 20 ms;
+		deadline => 400 ms;
+		priority => 2;
+		POSIX_Scheduling_Policy => SCHED_FIFO;	
+end wifi_control_data_collector;
+
+thread implementation wifi_control_data_collector.impl
+end wifi_control_data_collector.impl;
+
+
+
+thread wifi_video_data_sender
+	features
+		l_camera_img_in: in data port StereoCamAADL_Data::camera_image.impl;
+		r_camera_img_in: in data port StereoCamAADL_Data::camera_image.impl;
+		l_camera_img_out: out data port StereoCamAADL_Data::camera_image.impl;
+		r_camera_img_out: out data port StereoCamAADL_Data::camera_image.impl;
+	properties
+		Dispatch_protocol => periodic;
+		period => 100 ms;
+		compute_execution_time => 10 ms .. 20 ms;
+		deadline => 100 ms;
+		priority => 2;
+		POSIX_Scheduling_Policy => SCHED_FIFO;	
+end wifi_video_data_sender;
+
+thread implementation wifi_video_data_sender.impl
+end wifi_video_data_sender.impl;
 
 	
 end StereoCamAADL_Threads;

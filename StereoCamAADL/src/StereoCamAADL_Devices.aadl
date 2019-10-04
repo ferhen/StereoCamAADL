@@ -9,80 +9,80 @@ public
 	
 	with Electricity_Properties;
 	
------------------------
--------CAMERA----------
------------------------
-device camera
-	features
-		usbPort: requires bus access Buses::USB::USB.impl;
-		imgOut: out data port;
-		camera_on_off: in event port;
-end camera;
-
-device implementation camera.impl
-end camera.impl;
-
------------------------
--------LASER-----------
------------------------
-device laser
-	features
-		Serial_Wire : requires bus access Buses::USB::USB.impl;
-		Supply      :    requires bus access buses::misc::V12_Bus.impl;
-		proc_evt: out event port;
-end laser;
-
-device implementation laser.impl
-	properties
-		Initialize_Entrypoint => classifier (Laser_Initialize);
-		Electricity_Properties::Idle_Current => 10.0 mA;  -- no data
-		Electricity_Properties::Run_Current =>  800.0 mA; --  800 mA nominal
-		Electricity_Properties::Peak_Current => 100.0 mA; -- to measure
-		Electricity_Properties::Core_Voltage => 12.0 V;
-		Electricity_Properties::Acquisition_Time => 1 sec; -- no data, scanning: 100 msec/scan
-		Electricity_Properties::Peak_Time => 1 ms;
-		Electricity_Properties::VIH_min => 2.0 V;
-		Electricity_Properties::VIL_max => 1.0 V;
-		Electricity_Properties::VOH_min => 3.2 V;
-		Electricity_Properties::VOL_max => 0.4 V;
-		Electricity_Properties::Device_Type => Slave;
-end laser.impl;
-
-subprogram Laser_Initialize
-	properties
-		Source_Name => "laser_initialize";
-		Source_Text => ("telemeter_urg04lx.c");
-		Source_Language => (C);
-end Laser_Initialize;
-
-subprogram Laser_Read_Acquisition
-	properties
-		Source_Name => "laser_read_acquisition";
-		Source_Text => ("telemeter_urg04lx.c");
-		Source_Language => (C);
-end Laser_Read_Acquisition;
-
-subprogram Laser_Start_Acquisition
-	properties
-		Source_Name => "laser_start_acquisition";
-		Source_Text => ("telemeter_urg04lx.c");
-		Source_Language => (C);
-end Laser_Start_Acquisition;
-
-
------------------------
----------GPS-----------
------------------------
-device GPS
-  features
-    GPS_Out : out data port;
-end GPS;
-
-device implementation GPS.impl
-	properties
-		Dispatch_Protocol => Periodic;
-    	Period => 50 ms; --  50 Hz
-end GPS.impl;
+	-----------------------
+	-------CAMERA----------
+	-----------------------
+	device camera
+		features
+			usbPort: requires bus access Buses::USB::USB.impl;
+			imgOut: out data port;
+			camera_on_off: in event port;
+	end camera;
+	
+	device implementation camera.impl
+	end camera.impl;
+	
+	-----------------------
+	-------LASER-----------
+	-----------------------
+	device laser
+		features
+			Serial_Wire : requires bus access Buses::USB::USB.impl;
+			Supply      :    requires bus access buses::misc::V12_Bus.impl;
+			proc_evt: out event port;
+	end laser;
+	
+	device implementation laser.impl
+		properties
+			Initialize_Entrypoint => classifier (Laser_Initialize);
+			Electricity_Properties::Idle_Current => 10.0 mA;  -- no data
+			Electricity_Properties::Run_Current =>  800.0 mA; --  800 mA nominal
+			Electricity_Properties::Peak_Current => 100.0 mA; -- to measure
+			Electricity_Properties::Core_Voltage => 12.0 V;
+			Electricity_Properties::Acquisition_Time => 1 sec; -- no data, scanning: 100 msec/scan
+			Electricity_Properties::Peak_Time => 1 ms;
+			Electricity_Properties::VIH_min => 2.0 V;
+			Electricity_Properties::VIL_max => 1.0 V;
+			Electricity_Properties::VOH_min => 3.2 V;
+			Electricity_Properties::VOL_max => 0.4 V;
+			Electricity_Properties::Device_Type => Slave;
+	end laser.impl;
+	
+	subprogram Laser_Initialize
+		properties
+			Source_Name => "laser_initialize";
+			Source_Text => ("telemeter_urg04lx.c");
+			Source_Language => (C);
+	end Laser_Initialize;
+	
+	subprogram Laser_Read_Acquisition
+		properties
+			Source_Name => "laser_read_acquisition";
+			Source_Text => ("telemeter_urg04lx.c");
+			Source_Language => (C);
+	end Laser_Read_Acquisition;
+	
+	subprogram Laser_Start_Acquisition
+		properties
+			Source_Name => "laser_start_acquisition";
+			Source_Text => ("telemeter_urg04lx.c");
+			Source_Language => (C);
+	end Laser_Start_Acquisition;
+	
+	
+	-----------------------
+	---------GPS-----------
+	-----------------------
+	device GPS
+	  features
+	    GPS_Out : out data port;
+	end GPS;
+	
+	device implementation GPS.impl
+		properties
+			Dispatch_Protocol => Periodic;
+	    	Period => 50 ms; --  50 Hz
+	end GPS.impl;
 
 
 end StereoCamAADL_Devices;
