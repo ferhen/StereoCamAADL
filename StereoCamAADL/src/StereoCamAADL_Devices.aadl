@@ -4,7 +4,9 @@ public
 	with Buses::USB;
 
 	with Buses::misc;
-
+	
+	with StereoCamAADL_Data;
+	
 	with Buses::Ethernet;
 
 	-----------------------
@@ -13,8 +15,8 @@ public
 	device camera
 		features
 			usbPort: requires bus access Buses::USB::USB.impl;
-			imgOut: out data port;
-			camera_on_off: in event port;
+			imgOut: out data port StereoCamAADL_Data::camera_image.impl;
+			camera_trigger: in event port;
 	end camera;
 
 	device implementation camera.impl
