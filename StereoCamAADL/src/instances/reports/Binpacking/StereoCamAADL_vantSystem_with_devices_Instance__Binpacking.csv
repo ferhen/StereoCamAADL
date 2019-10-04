@@ -1,0 +1,15 @@
+Bind threads to processors Report
+
+Binpacker Analysis Report
+
+Warning! Bus this_usb_1 is missing Transmission Time property. Using default of 1.0E-5
+Warning! Bus this_usb_2 is missing Transmission Time property. Using default of 1.0E-5
+Warning! Bus this_ethernet is missing Transmission Time property. Using default of 1.0E-5
+Warning! Device this_camera_L is missing period property. Using default of 1 ns
+Warning! Device this_camera_R is missing period property. Using default of 1 ns
+Warning! Device this_laser is missing period property. Using default of 1 ns
+Warning! Device this_gps is missing period property. Using default of 1 ns
+
+Binpacking results: FAILED
+
+Thread to Processor Bindings

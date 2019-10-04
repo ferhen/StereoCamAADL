@@ -11,13 +11,10 @@ public
 	data camera_image
 		properties
 			Data_Model::Data_Representation => Array;
+			Data_Size => 40 MByte;
 	end camera_image;
 	
 	data implementation camera_image.impl
-		subcomponents
-		    r: data Base_Types::Unsigned_8;
-		    g: data base_types::Unsigned_8;
-		    b: data base_types::Unsigned_8; 
 	end camera_image.impl;
 	
 	-----------------------
@@ -26,6 +23,7 @@ public
 	data laser_data
 		properties
 			Data_Model::Data_Representation => Array;
+			Data_Size => 3 MByte;
 	end laser_data;
 	
 	data implementation laser_data.impl
@@ -37,6 +35,7 @@ public
 	data gps_data
 		properties
 			Data_Model::Data_Representation => Array;
+			Data_Size => 8 Bytes;
 	end gps_data;
 	
 	data implementation gps_data.impl

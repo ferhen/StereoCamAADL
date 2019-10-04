@@ -65,6 +65,15 @@
         </ownedValue>
         <propertyAssociation href="../StereoCamAADL_Data.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.0"/>
       </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/Memory_Properties.aadl#Memory_Properties.Data_Size"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:IntegerLiteral" value="40">
+            <unit href="platform:/plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.15/@ownedLiteral.3"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../StereoCamAADL_Data.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.1"/>
+      </ownedPropertyAssociation>
       <feature xsi:type="aadl2:DataPort" href="../StereoCamAADL_Devices.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.0"/>
     </featureInstance>
     <featureInstance name="camera_trigger" category="eventPort" direction="out">
@@ -88,6 +97,15 @@
         </ownedValue>
         <propertyAssociation href="../StereoCamAADL_Data.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.0"/>
       </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/Memory_Properties.aadl#Memory_Properties.Data_Size"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:IntegerLiteral" value="40">
+            <unit href="platform:/plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.15/@ownedLiteral.3"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../StereoCamAADL_Data.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.1"/>
+      </ownedPropertyAssociation>
       <feature xsi:type="aadl2:DataPort" href="../StereoCamAADL_Devices.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.0"/>
     </featureInstance>
     <featureInstance name="camera_trigger" category="eventPort" direction="out">
@@ -101,6 +119,27 @@
     <classifier xsi:type="aadl2:DeviceImplementation" href="../StereoCamAADL_Devices.aadl#StereoCamAADL_Devices.camera.impl"/>
   </componentInstance>
   <componentInstance name="this_laser" category="device">
+    <featureInstance name="laser_data_out" direction="out">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:NamedValue">
+            <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.0"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../StereoCamAADL_Data.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedPropertyAssociation.0"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/Memory_Properties.aadl#Memory_Properties.Data_Size"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:IntegerLiteral" value="3">
+            <unit href="platform:/plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.15/@ownedLiteral.3"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../StereoCamAADL_Data.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedPropertyAssociation.1"/>
+      </ownedPropertyAssociation>
+      <feature xsi:type="aadl2:DataPort" href="../StereoCamAADL_Devices.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedDataPort.0"/>
+    </featureInstance>
     <featureInstance name="proc_evt" category="eventPort" direction="out">
       <feature xsi:type="aadl2:EventPort" href="../StereoCamAADL_Devices.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedEventPort.0"/>
     </featureInstance>
@@ -115,7 +154,25 @@
     <classifier xsi:type="aadl2:DeviceType" href="../StereoCamAADL_Devices.aadl#StereoCamAADL_Devices.laser"/>
   </componentInstance>
   <componentInstance name="this_gps" category="device">
-    <featureInstance name="gps_out" direction="out">
+    <featureInstance name="gps_data_out" direction="out">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:NamedValue">
+            <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.0"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../StereoCamAADL_Data.aadl#/0/@ownedPublicSection/@ownedClassifier.4/@ownedPropertyAssociation.0"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/Memory_Properties.aadl#Memory_Properties.Data_Size"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:IntegerLiteral" value="8">
+            <unit href="platform:/plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.15/@ownedLiteral.1"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../StereoCamAADL_Data.aadl#/0/@ownedPublicSection/@ownedClassifier.4/@ownedPropertyAssociation.1"/>
+      </ownedPropertyAssociation>
       <feature xsi:type="aadl2:DataPort" href="../StereoCamAADL_Devices.aadl#/0/@ownedPublicSection/@ownedClassifier.4/@ownedDataPort.0"/>
     </featureInstance>
     <featureInstance name="gps_trigger" category="eventPort" direction="out">
@@ -125,30 +182,100 @@
     <index>0</index>
     <classifier xsi:type="aadl2:DeviceType" href="../StereoCamAADL_Devices.aadl#StereoCamAADL_Devices.GPS"/>
   </componentInstance>
-  <componentInstance name="flash_memory" category="memory">
-    <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
-      <property href="platform:/plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/Memory_Properties.aadl#Memory_Properties.Memory_Size"/>
-      <ownedValue>
-        <ownedValue xsi:type="aadl2:IntegerLiteral" value="2">
-          <unit href="platform:/plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.15/@ownedLiteral.4"/>
-        </ownedValue>
-      </ownedValue>
-      <propertyAssociation href="../StereoCamAADL.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedMemorySubcomponent.0/@ownedPropertyAssociation.0"/>
-    </ownedPropertyAssociation>
-    <subcomponent xsi:type="aadl2:MemorySubcomponent" href="../StereoCamAADL.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedMemorySubcomponent.0"/>
-    <index>0</index>
-    <classifier xsi:type="aadl2:MemoryImplementation" href="../../properties_set/memories.aadl#Memories.Flash_Memory.impl"/>
-  </componentInstance>
   <componentInstance name="this_controller" category="process">
     <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
       <property href="platform:/plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Processor_Binding"/>
       <ownedValue>
         <ownedValue xsi:type="aadl2:ListValue">
-          <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.9"/>
+          <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.8"/>
         </ownedValue>
       </ownedValue>
       <propertyAssociation href="../StereoCamAADL.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.0"/>
     </ownedPropertyAssociation>
+    <featureInstance name="l_cam_img">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:NamedValue">
+            <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.0"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../StereoCamAADL_Data.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.0"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/Memory_Properties.aadl#Memory_Properties.Data_Size"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:IntegerLiteral" value="40">
+            <unit href="platform:/plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.15/@ownedLiteral.3"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../StereoCamAADL_Data.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.1"/>
+      </ownedPropertyAssociation>
+      <feature xsi:type="aadl2:DataPort" href="../StereoCamAADL.aadl#/0/@ownedPublicSection/@ownedClassifier.4/@ownedDataPort.0"/>
+    </featureInstance>
+    <featureInstance name="r_cam_img">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:NamedValue">
+            <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.0"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../StereoCamAADL_Data.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.0"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/Memory_Properties.aadl#Memory_Properties.Data_Size"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:IntegerLiteral" value="40">
+            <unit href="platform:/plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.15/@ownedLiteral.3"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../StereoCamAADL_Data.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.1"/>
+      </ownedPropertyAssociation>
+      <feature xsi:type="aadl2:DataPort" href="../StereoCamAADL.aadl#/0/@ownedPublicSection/@ownedClassifier.4/@ownedDataPort.1"/>
+    </featureInstance>
+    <featureInstance name="laser_data">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:NamedValue">
+            <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.0"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../StereoCamAADL_Data.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedPropertyAssociation.0"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/Memory_Properties.aadl#Memory_Properties.Data_Size"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:IntegerLiteral" value="3">
+            <unit href="platform:/plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.15/@ownedLiteral.3"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../StereoCamAADL_Data.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedPropertyAssociation.1"/>
+      </ownedPropertyAssociation>
+      <feature xsi:type="aadl2:DataPort" href="../StereoCamAADL.aadl#/0/@ownedPublicSection/@ownedClassifier.4/@ownedDataPort.2"/>
+    </featureInstance>
+    <featureInstance name="gps_data">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:NamedValue">
+            <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.0"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../StereoCamAADL_Data.aadl#/0/@ownedPublicSection/@ownedClassifier.4/@ownedPropertyAssociation.0"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/Memory_Properties.aadl#Memory_Properties.Data_Size"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:IntegerLiteral" value="8">
+            <unit href="platform:/plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.15/@ownedLiteral.1"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../StereoCamAADL_Data.aadl#/0/@ownedPublicSection/@ownedClassifier.4/@ownedPropertyAssociation.1"/>
+      </ownedPropertyAssociation>
+      <feature xsi:type="aadl2:DataPort" href="../StereoCamAADL.aadl#/0/@ownedPublicSection/@ownedClassifier.4/@ownedDataPort.3"/>
+    </featureInstance>
     <featureInstance name="control_data" direction="out">
       <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
         <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
@@ -159,15 +286,15 @@
         </ownedValue>
         <propertyAssociation href="../StereoCamAADL_Data.aadl#/0/@ownedPublicSection/@ownedClassifier.6/@ownedPropertyAssociation.0"/>
       </ownedPropertyAssociation>
-      <feature xsi:type="aadl2:DataPort" href="../StereoCamAADL.aadl#/0/@ownedPublicSection/@ownedClassifier.4/@ownedDataPort.0"/>
+      <feature xsi:type="aadl2:DataPort" href="../StereoCamAADL.aadl#/0/@ownedPublicSection/@ownedClassifier.4/@ownedDataPort.4"/>
     </featureInstance>
-    <featureInstance name="cameras_trigger" category="eventPort">
+    <featureInstance name="cameras_trigger" category="eventPort" direction="out">
       <feature xsi:type="aadl2:EventPort" href="../StereoCamAADL.aadl#/0/@ownedPublicSection/@ownedClassifier.4/@ownedEventPort.0"/>
     </featureInstance>
-    <featureInstance name="laser_trigger" category="eventPort">
+    <featureInstance name="laser_trigger" category="eventPort" direction="out">
       <feature xsi:type="aadl2:EventPort" href="../StereoCamAADL.aadl#/0/@ownedPublicSection/@ownedClassifier.4/@ownedEventPort.1"/>
     </featureInstance>
-    <featureInstance name="gps_trigger" category="eventPort">
+    <featureInstance name="gps_trigger" category="eventPort" direction="out">
       <feature xsi:type="aadl2:EventPort" href="../StereoCamAADL.aadl#/0/@ownedPublicSection/@ownedClassifier.4/@ownedEventPort.2"/>
     </featureInstance>
     <componentInstance name="data_saver_thread" category="thread">
@@ -175,7 +302,7 @@
         <property href="platform:/plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Processor_Binding"/>
         <ownedValue>
           <ownedValue xsi:type="aadl2:ListValue">
-            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.9"/>
+            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.8"/>
           </ownedValue>
         </ownedValue>
         <propertyAssociation href="../StereoCamAADL.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.0"/>
@@ -247,6 +374,15 @@
           </ownedValue>
           <propertyAssociation href="../StereoCamAADL_Data.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.0"/>
         </ownedPropertyAssociation>
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/Memory_Properties.aadl#Memory_Properties.Data_Size"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:IntegerLiteral" value="40">
+              <unit href="platform:/plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.15/@ownedLiteral.3"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../StereoCamAADL_Data.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.1"/>
+        </ownedPropertyAssociation>
         <feature xsi:type="aadl2:DataPort" href="../StereoCamAADL_Threads.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.0"/>
       </featureInstance>
       <featureInstance name="r_camera_img_in">
@@ -258,6 +394,15 @@
             </ownedValue>
           </ownedValue>
           <propertyAssociation href="../StereoCamAADL_Data.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.0"/>
+        </ownedPropertyAssociation>
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/Memory_Properties.aadl#Memory_Properties.Data_Size"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:IntegerLiteral" value="40">
+              <unit href="platform:/plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.15/@ownedLiteral.3"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../StereoCamAADL_Data.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.1"/>
         </ownedPropertyAssociation>
         <feature xsi:type="aadl2:DataPort" href="../StereoCamAADL_Threads.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.1"/>
       </featureInstance>
@@ -271,6 +416,15 @@
           </ownedValue>
           <propertyAssociation href="../StereoCamAADL_Data.aadl#/0/@ownedPublicSection/@ownedClassifier.4/@ownedPropertyAssociation.0"/>
         </ownedPropertyAssociation>
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/Memory_Properties.aadl#Memory_Properties.Data_Size"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:IntegerLiteral" value="8">
+              <unit href="platform:/plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.15/@ownedLiteral.1"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../StereoCamAADL_Data.aadl#/0/@ownedPublicSection/@ownedClassifier.4/@ownedPropertyAssociation.1"/>
+        </ownedPropertyAssociation>
         <feature xsi:type="aadl2:DataPort" href="../StereoCamAADL_Threads.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.2"/>
       </featureInstance>
       <featureInstance name="laser_data_in">
@@ -282,6 +436,15 @@
             </ownedValue>
           </ownedValue>
           <propertyAssociation href="../StereoCamAADL_Data.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedPropertyAssociation.0"/>
+        </ownedPropertyAssociation>
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/Memory_Properties.aadl#Memory_Properties.Data_Size"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:IntegerLiteral" value="3">
+              <unit href="platform:/plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.15/@ownedLiteral.3"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../StereoCamAADL_Data.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedPropertyAssociation.1"/>
         </ownedPropertyAssociation>
         <feature xsi:type="aadl2:DataPort" href="../StereoCamAADL_Threads.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.3"/>
       </featureInstance>
@@ -297,7 +460,7 @@
         <property href="platform:/plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Processor_Binding"/>
         <ownedValue>
           <ownedValue xsi:type="aadl2:ListValue">
-            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.9"/>
+            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.8"/>
           </ownedValue>
         </ownedValue>
         <propertyAssociation href="../StereoCamAADL.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.0"/>
@@ -359,6 +522,48 @@
         </ownedValue>
         <propertyAssociation href="../StereoCamAADL_Threads.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedPropertyAssociation.5"/>
       </ownedPropertyAssociation>
+      <featureInstance name="l_camera_img_in">
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:NamedValue">
+              <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.0"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../StereoCamAADL_Data.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.0"/>
+        </ownedPropertyAssociation>
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/Memory_Properties.aadl#Memory_Properties.Data_Size"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:IntegerLiteral" value="40">
+              <unit href="platform:/plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.15/@ownedLiteral.3"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../StereoCamAADL_Data.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.1"/>
+        </ownedPropertyAssociation>
+        <feature xsi:type="aadl2:DataPort" href="../StereoCamAADL_Threads.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedDataPort.0"/>
+      </featureInstance>
+      <featureInstance name="r_camera_img_in">
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:NamedValue">
+              <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.0"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../StereoCamAADL_Data.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.0"/>
+        </ownedPropertyAssociation>
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/Memory_Properties.aadl#Memory_Properties.Data_Size"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:IntegerLiteral" value="40">
+              <unit href="platform:/plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.15/@ownedLiteral.3"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../StereoCamAADL_Data.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.1"/>
+        </ownedPropertyAssociation>
+        <feature xsi:type="aadl2:DataPort" href="../StereoCamAADL_Threads.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedDataPort.1"/>
+      </featureInstance>
       <featureInstance name="l_camera_img_out" direction="out">
         <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
           <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
@@ -369,7 +574,16 @@
           </ownedValue>
           <propertyAssociation href="../StereoCamAADL_Data.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.0"/>
         </ownedPropertyAssociation>
-        <feature xsi:type="aadl2:DataPort" href="../StereoCamAADL_Threads.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedDataPort.0"/>
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/Memory_Properties.aadl#Memory_Properties.Data_Size"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:IntegerLiteral" value="40">
+              <unit href="platform:/plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.15/@ownedLiteral.3"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../StereoCamAADL_Data.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.1"/>
+        </ownedPropertyAssociation>
+        <feature xsi:type="aadl2:DataPort" href="../StereoCamAADL_Threads.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedDataPort.2"/>
       </featureInstance>
       <featureInstance name="r_camera_img_out" direction="out">
         <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
@@ -381,9 +595,18 @@
           </ownedValue>
           <propertyAssociation href="../StereoCamAADL_Data.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.0"/>
         </ownedPropertyAssociation>
-        <feature xsi:type="aadl2:DataPort" href="../StereoCamAADL_Threads.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedDataPort.1"/>
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/Memory_Properties.aadl#Memory_Properties.Data_Size"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:IntegerLiteral" value="40">
+              <unit href="platform:/plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.15/@ownedLiteral.3"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../StereoCamAADL_Data.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.1"/>
+        </ownedPropertyAssociation>
+        <feature xsi:type="aadl2:DataPort" href="../StereoCamAADL_Threads.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedDataPort.3"/>
       </featureInstance>
-      <featureInstance name="cameras_trigger" category="eventPort">
+      <featureInstance name="cameras_trigger" category="eventPort" direction="out">
         <feature xsi:type="aadl2:EventPort" href="../StereoCamAADL_Threads.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedEventPort.0"/>
       </featureInstance>
       <subcomponent xsi:type="aadl2:ThreadSubcomponent" href="../StereoCamAADL.aadl#/0/@ownedPublicSection/@ownedClassifier.5/@ownedThreadSubcomponent.1"/>
@@ -395,7 +618,7 @@
         <property href="platform:/plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Processor_Binding"/>
         <ownedValue>
           <ownedValue xsi:type="aadl2:ListValue">
-            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.9"/>
+            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.8"/>
           </ownedValue>
         </ownedValue>
         <propertyAssociation href="../StereoCamAADL.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.0"/>
@@ -457,6 +680,27 @@
         </ownedValue>
         <propertyAssociation href="../StereoCamAADL_Threads.aadl#/0/@ownedPublicSection/@ownedClassifier.4/@ownedPropertyAssociation.5"/>
       </ownedPropertyAssociation>
+      <featureInstance name="laser_data_in">
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:NamedValue">
+              <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.0"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../StereoCamAADL_Data.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedPropertyAssociation.0"/>
+        </ownedPropertyAssociation>
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/Memory_Properties.aadl#Memory_Properties.Data_Size"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:IntegerLiteral" value="3">
+              <unit href="platform:/plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.15/@ownedLiteral.3"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../StereoCamAADL_Data.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedPropertyAssociation.1"/>
+        </ownedPropertyAssociation>
+        <feature xsi:type="aadl2:DataPort" href="../StereoCamAADL_Threads.aadl#/0/@ownedPublicSection/@ownedClassifier.4/@ownedDataPort.0"/>
+      </featureInstance>
       <featureInstance name="laser_data_out" direction="out">
         <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
           <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
@@ -467,9 +711,18 @@
           </ownedValue>
           <propertyAssociation href="../StereoCamAADL_Data.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedPropertyAssociation.0"/>
         </ownedPropertyAssociation>
-        <feature xsi:type="aadl2:DataPort" href="../StereoCamAADL_Threads.aadl#/0/@ownedPublicSection/@ownedClassifier.4/@ownedDataPort.0"/>
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/Memory_Properties.aadl#Memory_Properties.Data_Size"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:IntegerLiteral" value="3">
+              <unit href="platform:/plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.15/@ownedLiteral.3"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../StereoCamAADL_Data.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedPropertyAssociation.1"/>
+        </ownedPropertyAssociation>
+        <feature xsi:type="aadl2:DataPort" href="../StereoCamAADL_Threads.aadl#/0/@ownedPublicSection/@ownedClassifier.4/@ownedDataPort.1"/>
       </featureInstance>
-      <featureInstance name="laser_trigger" category="eventPort">
+      <featureInstance name="laser_trigger" category="eventPort" direction="out">
         <feature xsi:type="aadl2:EventPort" href="../StereoCamAADL_Threads.aadl#/0/@ownedPublicSection/@ownedClassifier.4/@ownedEventPort.0"/>
       </featureInstance>
       <subcomponent xsi:type="aadl2:ThreadSubcomponent" href="../StereoCamAADL.aadl#/0/@ownedPublicSection/@ownedClassifier.5/@ownedThreadSubcomponent.2"/>
@@ -481,7 +734,7 @@
         <property href="platform:/plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Processor_Binding"/>
         <ownedValue>
           <ownedValue xsi:type="aadl2:ListValue">
-            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.9"/>
+            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.8"/>
           </ownedValue>
         </ownedValue>
         <propertyAssociation href="../StereoCamAADL.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.0"/>
@@ -543,6 +796,27 @@
         </ownedValue>
         <propertyAssociation href="../StereoCamAADL_Threads.aadl#/0/@ownedPublicSection/@ownedClassifier.6/@ownedPropertyAssociation.5"/>
       </ownedPropertyAssociation>
+      <featureInstance name="gps_data_in">
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:NamedValue">
+              <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.0"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../StereoCamAADL_Data.aadl#/0/@ownedPublicSection/@ownedClassifier.4/@ownedPropertyAssociation.0"/>
+        </ownedPropertyAssociation>
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/Memory_Properties.aadl#Memory_Properties.Data_Size"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:IntegerLiteral" value="8">
+              <unit href="platform:/plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.15/@ownedLiteral.1"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../StereoCamAADL_Data.aadl#/0/@ownedPublicSection/@ownedClassifier.4/@ownedPropertyAssociation.1"/>
+        </ownedPropertyAssociation>
+        <feature xsi:type="aadl2:DataPort" href="../StereoCamAADL_Threads.aadl#/0/@ownedPublicSection/@ownedClassifier.6/@ownedDataPort.0"/>
+      </featureInstance>
       <featureInstance name="gps_data_out" direction="out">
         <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
           <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
@@ -553,9 +827,18 @@
           </ownedValue>
           <propertyAssociation href="../StereoCamAADL_Data.aadl#/0/@ownedPublicSection/@ownedClassifier.4/@ownedPropertyAssociation.0"/>
         </ownedPropertyAssociation>
-        <feature xsi:type="aadl2:DataPort" href="../StereoCamAADL_Threads.aadl#/0/@ownedPublicSection/@ownedClassifier.6/@ownedDataPort.0"/>
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/Memory_Properties.aadl#Memory_Properties.Data_Size"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:IntegerLiteral" value="8">
+              <unit href="platform:/plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.15/@ownedLiteral.1"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../StereoCamAADL_Data.aadl#/0/@ownedPublicSection/@ownedClassifier.4/@ownedPropertyAssociation.1"/>
+        </ownedPropertyAssociation>
+        <feature xsi:type="aadl2:DataPort" href="../StereoCamAADL_Threads.aadl#/0/@ownedPublicSection/@ownedClassifier.6/@ownedDataPort.1"/>
       </featureInstance>
-      <featureInstance name="gps_trigger" category="eventPort">
+      <featureInstance name="gps_trigger" category="eventPort" direction="out">
         <feature xsi:type="aadl2:EventPort" href="../StereoCamAADL_Threads.aadl#/0/@ownedPublicSection/@ownedClassifier.6/@ownedEventPort.0"/>
       </featureInstance>
       <subcomponent xsi:type="aadl2:ThreadSubcomponent" href="../StereoCamAADL.aadl#/0/@ownedPublicSection/@ownedClassifier.5/@ownedThreadSubcomponent.3"/>
@@ -567,7 +850,7 @@
         <property href="platform:/plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Processor_Binding"/>
         <ownedValue>
           <ownedValue xsi:type="aadl2:ListValue">
-            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.9"/>
+            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.8"/>
           </ownedValue>
         </ownedValue>
         <propertyAssociation href="../StereoCamAADL.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.0"/>
@@ -650,7 +933,7 @@
         <property href="platform:/plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Processor_Binding"/>
         <ownedValue>
           <ownedValue xsi:type="aadl2:ListValue">
-            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.9"/>
+            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.8"/>
           </ownedValue>
         </ownedValue>
         <propertyAssociation href="../StereoCamAADL.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.0"/>
@@ -722,6 +1005,15 @@
           </ownedValue>
           <propertyAssociation href="../StereoCamAADL_Data.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.0"/>
         </ownedPropertyAssociation>
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/Memory_Properties.aadl#Memory_Properties.Data_Size"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:IntegerLiteral" value="40">
+              <unit href="platform:/plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.15/@ownedLiteral.3"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../StereoCamAADL_Data.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.1"/>
+        </ownedPropertyAssociation>
         <feature xsi:type="aadl2:DataPort" href="../StereoCamAADL_Threads.aadl#/0/@ownedPublicSection/@ownedClassifier.10/@ownedDataPort.0"/>
       </featureInstance>
       <featureInstance name="r_camera_img_in">
@@ -734,40 +1026,49 @@
           </ownedValue>
           <propertyAssociation href="../StereoCamAADL_Data.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.0"/>
         </ownedPropertyAssociation>
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/Memory_Properties.aadl#Memory_Properties.Data_Size"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:IntegerLiteral" value="40">
+              <unit href="platform:/plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.15/@ownedLiteral.3"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../StereoCamAADL_Data.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.1"/>
+        </ownedPropertyAssociation>
         <feature xsi:type="aadl2:DataPort" href="../StereoCamAADL_Threads.aadl#/0/@ownedPublicSection/@ownedClassifier.10/@ownedDataPort.1"/>
       </featureInstance>
       <subcomponent xsi:type="aadl2:ThreadSubcomponent" href="../StereoCamAADL.aadl#/0/@ownedPublicSection/@ownedClassifier.5/@ownedThreadSubcomponent.5"/>
       <index>0</index>
       <classifier xsi:type="aadl2:ThreadImplementation" href="../StereoCamAADL_Threads.aadl#StereoCamAADL_Threads.wifi_video_data_sender.impl"/>
     </componentInstance>
-    <connectionInstance name="stereo_img_collector_thread.l_camera_img_out -> data_saver_thread.l_camera_img_in" complete="true" kind="portConnection" destination="//@componentInstance.8/@componentInstance.0/@featureInstance.0" source="//@componentInstance.8/@componentInstance.1/@featureInstance.0">
-      <connectionReference context="//@componentInstance.8" source="//@componentInstance.8/@componentInstance.1/@featureInstance.0" destination="//@componentInstance.8/@componentInstance.0/@featureInstance.0">
-        <connection xsi:type="aadl2:PortConnection" href="../StereoCamAADL.aadl#/0/@ownedPublicSection/@ownedClassifier.5/@ownedPortConnection.1"/>
+    <connectionInstance name="stereo_img_collector_thread.l_camera_img_out -> data_saver_thread.l_camera_img_in" complete="true" kind="portConnection" destination="//@componentInstance.7/@componentInstance.0/@featureInstance.0" source="//@componentInstance.7/@componentInstance.1/@featureInstance.2">
+      <connectionReference context="//@componentInstance.7" source="//@componentInstance.7/@componentInstance.1/@featureInstance.2" destination="//@componentInstance.7/@componentInstance.0/@featureInstance.0">
+        <connection xsi:type="aadl2:PortConnection" href="../StereoCamAADL.aadl#/0/@ownedPublicSection/@ownedClassifier.5/@ownedPortConnection.3"/>
       </connectionReference>
     </connectionInstance>
-    <connectionInstance name="stereo_img_collector_thread.l_camera_img_out -> wifi_video_data_sender_thread.l_camera_img_in" complete="true" kind="portConnection" destination="//@componentInstance.8/@componentInstance.5/@featureInstance.0" source="//@componentInstance.8/@componentInstance.1/@featureInstance.0">
-      <connectionReference context="//@componentInstance.8" source="//@componentInstance.8/@componentInstance.1/@featureInstance.0" destination="//@componentInstance.8/@componentInstance.5/@featureInstance.0">
-        <connection xsi:type="aadl2:PortConnection" href="../StereoCamAADL.aadl#/0/@ownedPublicSection/@ownedClassifier.5/@ownedPortConnection.7"/>
+    <connectionInstance name="stereo_img_collector_thread.l_camera_img_out -> wifi_video_data_sender_thread.l_camera_img_in" complete="true" kind="portConnection" destination="//@componentInstance.7/@componentInstance.5/@featureInstance.0" source="//@componentInstance.7/@componentInstance.1/@featureInstance.2">
+      <connectionReference context="//@componentInstance.7" source="//@componentInstance.7/@componentInstance.1/@featureInstance.2" destination="//@componentInstance.7/@componentInstance.5/@featureInstance.0">
+        <connection xsi:type="aadl2:PortConnection" href="../StereoCamAADL.aadl#/0/@ownedPublicSection/@ownedClassifier.5/@ownedPortConnection.11"/>
       </connectionReference>
     </connectionInstance>
-    <connectionInstance name="stereo_img_collector_thread.r_camera_img_out -> data_saver_thread.r_camera_img_in" complete="true" kind="portConnection" destination="//@componentInstance.8/@componentInstance.0/@featureInstance.1" source="//@componentInstance.8/@componentInstance.1/@featureInstance.1">
-      <connectionReference context="//@componentInstance.8" source="//@componentInstance.8/@componentInstance.1/@featureInstance.1" destination="//@componentInstance.8/@componentInstance.0/@featureInstance.1">
-        <connection xsi:type="aadl2:PortConnection" href="../StereoCamAADL.aadl#/0/@ownedPublicSection/@ownedClassifier.5/@ownedPortConnection.2"/>
-      </connectionReference>
-    </connectionInstance>
-    <connectionInstance name="stereo_img_collector_thread.r_camera_img_out -> wifi_video_data_sender_thread.r_camera_img_in" complete="true" kind="portConnection" destination="//@componentInstance.8/@componentInstance.5/@featureInstance.1" source="//@componentInstance.8/@componentInstance.1/@featureInstance.1">
-      <connectionReference context="//@componentInstance.8" source="//@componentInstance.8/@componentInstance.1/@featureInstance.1" destination="//@componentInstance.8/@componentInstance.5/@featureInstance.1">
-        <connection xsi:type="aadl2:PortConnection" href="../StereoCamAADL.aadl#/0/@ownedPublicSection/@ownedClassifier.5/@ownedPortConnection.8"/>
-      </connectionReference>
-    </connectionInstance>
-    <connectionInstance name="laser_data_collector_thread.laser_data_out -> data_saver_thread.laser_data_in" complete="true" kind="portConnection" destination="//@componentInstance.8/@componentInstance.0/@featureInstance.3" source="//@componentInstance.8/@componentInstance.2/@featureInstance.0">
-      <connectionReference context="//@componentInstance.8" source="//@componentInstance.8/@componentInstance.2/@featureInstance.0" destination="//@componentInstance.8/@componentInstance.0/@featureInstance.3">
+    <connectionInstance name="stereo_img_collector_thread.r_camera_img_out -> data_saver_thread.r_camera_img_in" complete="true" kind="portConnection" destination="//@componentInstance.7/@componentInstance.0/@featureInstance.1" source="//@componentInstance.7/@componentInstance.1/@featureInstance.3">
+      <connectionReference context="//@componentInstance.7" source="//@componentInstance.7/@componentInstance.1/@featureInstance.3" destination="//@componentInstance.7/@componentInstance.0/@featureInstance.1">
         <connection xsi:type="aadl2:PortConnection" href="../StereoCamAADL.aadl#/0/@ownedPublicSection/@ownedClassifier.5/@ownedPortConnection.4"/>
       </connectionReference>
     </connectionInstance>
-    <connectionInstance name="gps_data_collector_thread.gps_data_out -> data_saver_thread.gps_data_in" complete="true" kind="portConnection" destination="//@componentInstance.8/@componentInstance.0/@featureInstance.2" source="//@componentInstance.8/@componentInstance.3/@featureInstance.0">
-      <connectionReference context="//@componentInstance.8" source="//@componentInstance.8/@componentInstance.3/@featureInstance.0" destination="//@componentInstance.8/@componentInstance.0/@featureInstance.2">
-        <connection xsi:type="aadl2:PortConnection" href="../StereoCamAADL.aadl#/0/@ownedPublicSection/@ownedClassifier.5/@ownedPortConnection.6"/>
+    <connectionInstance name="stereo_img_collector_thread.r_camera_img_out -> wifi_video_data_sender_thread.r_camera_img_in" complete="true" kind="portConnection" destination="//@componentInstance.7/@componentInstance.5/@featureInstance.1" source="//@componentInstance.7/@componentInstance.1/@featureInstance.3">
+      <connectionReference context="//@componentInstance.7" source="//@componentInstance.7/@componentInstance.1/@featureInstance.3" destination="//@componentInstance.7/@componentInstance.5/@featureInstance.1">
+        <connection xsi:type="aadl2:PortConnection" href="../StereoCamAADL.aadl#/0/@ownedPublicSection/@ownedClassifier.5/@ownedPortConnection.12"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="laser_data_collector_thread.laser_data_out -> data_saver_thread.laser_data_in" complete="true" kind="portConnection" destination="//@componentInstance.7/@componentInstance.0/@featureInstance.3" source="//@componentInstance.7/@componentInstance.2/@featureInstance.1">
+      <connectionReference context="//@componentInstance.7" source="//@componentInstance.7/@componentInstance.2/@featureInstance.1" destination="//@componentInstance.7/@componentInstance.0/@featureInstance.3">
+        <connection xsi:type="aadl2:PortConnection" href="../StereoCamAADL.aadl#/0/@ownedPublicSection/@ownedClassifier.5/@ownedPortConnection.7"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="gps_data_collector_thread.gps_data_out -> data_saver_thread.gps_data_in" complete="true" kind="portConnection" destination="//@componentInstance.7/@componentInstance.0/@featureInstance.2" source="//@componentInstance.7/@componentInstance.3/@featureInstance.1">
+      <connectionReference context="//@componentInstance.7" source="//@componentInstance.7/@componentInstance.3/@featureInstance.1" destination="//@componentInstance.7/@componentInstance.0/@featureInstance.2">
+        <connection xsi:type="aadl2:PortConnection" href="../StereoCamAADL.aadl#/0/@ownedPublicSection/@ownedClassifier.5/@ownedPortConnection.10"/>
       </connectionReference>
     </connectionInstance>
     <subcomponent xsi:type="aadl2:ProcessSubcomponent" href="../StereoCamAADL.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedProcessSubcomponent.0"/>
@@ -838,8 +1139,8 @@
     <index>0</index>
     <classifier xsi:type="aadl2:ProcessorImplementation" href="../StereoCamAADL.aadl#StreoCamAADL.A57.impl"/>
   </componentInstance>
-  <connectionInstance name="this_usb_1 -> this_A57.usb_bus_1" complete="true" kind="accessConnection" destination="//@componentInstance.9/@featureInstance.1" source="//@componentInstance.0">
-    <connectionReference context="/" source="//@componentInstance.0" destination="//@componentInstance.9/@featureInstance.1">
+  <connectionInstance name="this_usb_1 -> this_A57.usb_bus_1" complete="true" kind="accessConnection" destination="//@componentInstance.8/@featureInstance.1" source="//@componentInstance.0">
+    <connectionReference context="/" source="//@componentInstance.0" destination="//@componentInstance.8/@featureInstance.1">
       <connection xsi:type="aadl2:AccessConnection" href="../StereoCamAADL.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedAccessConnection.0"/>
     </connectionReference>
   </connectionInstance>
@@ -848,8 +1149,8 @@
       <connection xsi:type="aadl2:AccessConnection" href="../StereoCamAADL.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedAccessConnection.3"/>
     </connectionReference>
   </connectionInstance>
-  <connectionInstance name="this_usb_2 -> this_A57.usb_bus_2" complete="true" kind="accessConnection" destination="//@componentInstance.9/@featureInstance.2" source="//@componentInstance.1">
-    <connectionReference context="/" source="//@componentInstance.1" destination="//@componentInstance.9/@featureInstance.2">
+  <connectionInstance name="this_usb_2 -> this_A57.usb_bus_2" complete="true" kind="accessConnection" destination="//@componentInstance.8/@featureInstance.2" source="//@componentInstance.1">
+    <connectionReference context="/" source="//@componentInstance.1" destination="//@componentInstance.8/@featureInstance.2">
       <connection xsi:type="aadl2:AccessConnection" href="../StereoCamAADL.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedAccessConnection.1"/>
     </connectionReference>
   </connectionInstance>
@@ -858,46 +1159,14 @@
       <connection xsi:type="aadl2:AccessConnection" href="../StereoCamAADL.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedAccessConnection.4"/>
     </connectionReference>
   </connectionInstance>
-  <connectionInstance name="this_ethernet -> this_A57.ethernet" complete="true" kind="accessConnection" destination="//@componentInstance.9/@featureInstance.3" source="//@componentInstance.2">
-    <connectionReference context="/" source="//@componentInstance.2" destination="//@componentInstance.9/@featureInstance.3">
+  <connectionInstance name="this_ethernet -> this_A57.ethernet" complete="true" kind="accessConnection" destination="//@componentInstance.8/@featureInstance.3" source="//@componentInstance.2">
+    <connectionReference context="/" source="//@componentInstance.2" destination="//@componentInstance.8/@featureInstance.3">
       <connection xsi:type="aadl2:AccessConnection" href="../StereoCamAADL.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedAccessConnection.2"/>
     </connectionReference>
   </connectionInstance>
-  <connectionInstance name="this_ethernet -> this_laser.Serial_Wire" complete="true" kind="accessConnection" destination="//@componentInstance.5/@featureInstance.1" source="//@componentInstance.2">
-    <connectionReference context="/" source="//@componentInstance.2" destination="//@componentInstance.5/@featureInstance.1">
+  <connectionInstance name="this_ethernet -> this_laser.Serial_Wire" complete="true" kind="accessConnection" destination="//@componentInstance.5/@featureInstance.2" source="//@componentInstance.2">
+    <connectionReference context="/" source="//@componentInstance.2" destination="//@componentInstance.5/@featureInstance.2">
       <connection xsi:type="aadl2:AccessConnection" href="../StereoCamAADL.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedAccessConnection.5"/>
-    </connectionReference>
-  </connectionInstance>
-  <connectionInstance name="this_camera_L.camera_trigger -> this_controller.stereo_img_collector_thread.cameras_trigger" complete="true" kind="portConnection" destination="//@componentInstance.8/@componentInstance.1/@featureInstance.2" source="//@componentInstance.3/@featureInstance.1">
-    <connectionReference context="/" source="//@componentInstance.3/@featureInstance.1" destination="//@componentInstance.8/@featureInstance.1">
-      <connection xsi:type="aadl2:PortConnection" href="../StereoCamAADL.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPortConnection.0"/>
-    </connectionReference>
-    <connectionReference context="//@componentInstance.8" source="//@componentInstance.8/@featureInstance.1" destination="//@componentInstance.8/@componentInstance.1/@featureInstance.2">
-      <connection xsi:type="aadl2:PortConnection" href="../StereoCamAADL.aadl#/0/@ownedPublicSection/@ownedClassifier.5/@ownedPortConnection.0"/>
-    </connectionReference>
-  </connectionInstance>
-  <connectionInstance name="this_camera_R.camera_trigger -> this_controller.stereo_img_collector_thread.cameras_trigger" complete="true" kind="portConnection" destination="//@componentInstance.8/@componentInstance.1/@featureInstance.2" source="//@componentInstance.4/@featureInstance.1">
-    <connectionReference context="/" source="//@componentInstance.4/@featureInstance.1" destination="//@componentInstance.8/@featureInstance.1">
-      <connection xsi:type="aadl2:PortConnection" href="../StereoCamAADL.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPortConnection.1"/>
-    </connectionReference>
-    <connectionReference context="//@componentInstance.8" source="//@componentInstance.8/@featureInstance.1" destination="//@componentInstance.8/@componentInstance.1/@featureInstance.2">
-      <connection xsi:type="aadl2:PortConnection" href="../StereoCamAADL.aadl#/0/@ownedPublicSection/@ownedClassifier.5/@ownedPortConnection.0"/>
-    </connectionReference>
-  </connectionInstance>
-  <connectionInstance name="this_laser.proc_evt -> this_controller.laser_data_collector_thread.laser_trigger" complete="true" kind="portConnection" destination="//@componentInstance.8/@componentInstance.2/@featureInstance.1" source="//@componentInstance.5/@featureInstance.0">
-    <connectionReference context="/" source="//@componentInstance.5/@featureInstance.0" destination="//@componentInstance.8/@featureInstance.2">
-      <connection xsi:type="aadl2:PortConnection" href="../StereoCamAADL.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPortConnection.2"/>
-    </connectionReference>
-    <connectionReference context="//@componentInstance.8" source="//@componentInstance.8/@featureInstance.2" destination="//@componentInstance.8/@componentInstance.2/@featureInstance.1">
-      <connection xsi:type="aadl2:PortConnection" href="../StereoCamAADL.aadl#/0/@ownedPublicSection/@ownedClassifier.5/@ownedPortConnection.3"/>
-    </connectionReference>
-  </connectionInstance>
-  <connectionInstance name="this_gps.gps_trigger -> this_controller.gps_data_collector_thread.gps_trigger" complete="true" kind="portConnection" destination="//@componentInstance.8/@componentInstance.3/@featureInstance.1" source="//@componentInstance.6/@featureInstance.1">
-    <connectionReference context="/" source="//@componentInstance.6/@featureInstance.1" destination="//@componentInstance.8/@featureInstance.3">
-      <connection xsi:type="aadl2:PortConnection" href="../StereoCamAADL.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPortConnection.3"/>
-    </connectionReference>
-    <connectionReference context="//@componentInstance.8" source="//@componentInstance.8/@featureInstance.3" destination="//@componentInstance.8/@componentInstance.3/@featureInstance.1">
-      <connection xsi:type="aadl2:PortConnection" href="../StereoCamAADL.aadl#/0/@ownedPublicSection/@ownedClassifier.5/@ownedPortConnection.5"/>
     </connectionReference>
   </connectionInstance>
   <systemOperationMode name="No Modes"/>

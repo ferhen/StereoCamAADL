@@ -32,7 +32,11 @@ end data_saver.impl;
 
 thread stereo_img_collector
 	features
-		cameras_trigger: in event port;
+		cameras_trigger: out event port;
+		
+		l_camera_img_in: in data port StereoCamAADL_Data::camera_image.impl;
+		r_camera_img_in: in data port StereoCamAADL_Data::camera_image.impl;
+		
 		l_camera_img_out: out data port StereoCamAADL_Data::camera_image.impl;
 		r_camera_img_out: out data port StereoCamAADL_Data::camera_image.impl;
 	properties
@@ -52,7 +56,8 @@ end stereo_img_collector.impl;
 
 thread laser_data_collector
 	features
-		laser_trigger: in event port;
+		laser_trigger: out event port;
+		laser_data_in: in data port StereoCamAADL_Data::laser_data.impl;
 		laser_data_out: out data port StereoCamAADL_Data::laser_data.impl;
 	properties
 		Scheduling_Protocols => Rate_Monotonic_Protocol;
@@ -71,7 +76,8 @@ end laser_data_collector.impl;
 
 thread gps_data_collector
 	features
-		gps_trigger: in event port;
+		gps_trigger: out event port;
+		gps_data_in: in data port StereoCamAADL_Data::gps_data.impl;
 		gps_data_out: out data port StereoCamAADL_Data::gps_data.impl;
 	properties
 		Scheduling_Protocols => Rate_Monotonic_Protocol;
