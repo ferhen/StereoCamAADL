@@ -32,7 +32,6 @@ public
 			this_usb_1: bus Buses::USB::USB.impl;
 			this_usb_2: bus Buses::USB::USB.impl;
 			this_ethernet: bus Buses::Ethernet::Ethernet.impl;
-			flash_memory: memory Memories::Flash_Memory.impl {Memory_size => 2 GByte;};
 		connections
 			bus_usb_1_A57: bus access this_usb_1 -> this_A57.usb_bus_1;
 			bus_usb_2_A57: bus access this_usb_2 -> this_A57.usb_bus_2;

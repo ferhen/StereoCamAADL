@@ -8,6 +8,8 @@ public
 	with StereoCamAADL_Data;
 	
 	with Buses::Ethernet;
+	
+	with Memories;
 
 	-----------------------
 	-------CAMERA----------
@@ -30,6 +32,7 @@ public
 			Serial_Wire: requires bus access Buses::Ethernet::Ethernet.impl;
 			Supply: requires bus access buses::misc::V12_Bus.impl;
 			proc_evt: out event port;
+			laser_data_out: out data port StereoCamAADL_Data::laser_data.impl;
 	end laser;
 
 	device implementation laser.impl
@@ -43,7 +46,7 @@ public
 	device GPS
 		features
 			gps_trigger: out event port;
-			gps_out: out data port;
+			gps_data_out: out data port StereoCamAADL_Data::gps_data.impl;
 	end GPS;
 
 	device implementation GPS.impl
@@ -51,6 +54,24 @@ public
 			Dispatch_Protocol => Periodic;
 			Period => 50ms; --  50 Hz
 	end GPS.impl;
+	
+	
+	
+	-----------------------
+	-------SD CARD---------
+	-----------------------
+	device SDcard
+		features
+			data_in: in data port StereoCamAADL_Data::flash_mem_data.impl;
+			bus_access: requires bus access Buses::Misc::generic_bus.impl;
+	end SDcard;
+
+	device implementation SDcard.impl
+		properties
+			Dispatch_Protocol => Periodic;
+			Period => 50ms; --  50 Hz
+	end SDcard.impl;
+	
 
 
 end StereoCamAADL_Devices;
