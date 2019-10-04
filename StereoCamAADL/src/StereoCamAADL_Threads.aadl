@@ -44,7 +44,7 @@ public
 			Dispatch_protocol => periodic;
 			period => 100 ms;
 			compute_execution_time => 2 ms .. 10 ms;
-			deadline => 1000 ms;
+			deadline => 100 ms;
 			priority => 6;
 			--POSIX_Scheduling_Policy => SCHED_RR;	--priority based
 	end stereo_img_collector;
@@ -124,7 +124,7 @@ public
 			period => 100 ms;
 			compute_execution_time => 10 ms .. 20 ms;
 			deadline => 600 ms;
-			priority => 2;
+			priority => 20;
 			--POSIX_Scheduling_Policy => SCHED_FIFO;	
 	end wifi_video_data_sender;
 	
@@ -133,6 +133,8 @@ public
 
 	
 end StereoCamAADL_Threads;
+
+
 
 
 
