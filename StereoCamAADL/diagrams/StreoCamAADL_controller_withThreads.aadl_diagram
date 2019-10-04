@@ -1,5 +1,507 @@
 <?xml version="1.0" encoding="ASCII"?>
 <diagram:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:diagram="http://osate.org/diagram" formatVersion="7">
+  <element uuid="b6229988-d880-4382-b65e-8e6ec9aea8de" manual="true">
+    <element uuid="70be28c9-4b16-490c-8da5-31d4b5024b87" manual="true">
+      <element uuid="0319685a-a453-466c-b333-c24c7fd2d1da" manual="true">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>cameras_trigger_conn</seg>
+      </bo>
+    </element>
+    <element uuid="6cae8c0b-c81c-478b-82e6-be294d58aec7" manual="true">
+      <element uuid="846d207b-6302-413b-819b-4179e1dba3e1" manual="true">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>control_data_conn</seg>
+      </bo>
+    </element>
+    <element uuid="56fc06dc-6e5e-499b-a877-a283dfa914bb" manual="true">
+      <element uuid="37bb015c-0606-49f0-92b8-4fdb6b423d7a" manual="true">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>flash_mem_conn</seg>
+      </bo>
+    </element>
+    <element uuid="f3ce2b27-adf5-4a84-856e-4d518cdd174f" manual="true">
+      <element uuid="d0412c63-e1bc-4fbd-8524-b499e34092b7" manual="true">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>gps_data_in</seg>
+      </bo>
+    </element>
+    <element uuid="ff3cee38-fa20-48db-b074-3a8b9f3bc873" manual="true">
+      <element uuid="1af416e1-02eb-42b3-9c25-67ff863ce4f2" manual="true">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>gps_data_save</seg>
+      </bo>
+      <bendpoints>
+        <point x="678.0" y="502.0"/>
+        <point x="678.0" y="422.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="73eaf5d1-d2f8-4fe9-bbbc-fde79bedf8b3" manual="true">
+      <element uuid="122c1019-9ca7-4b55-89e7-6fa5e50d554c" manual="true">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>gps_trigger_conn</seg>
+      </bo>
+    </element>
+    <element uuid="f3195979-0148-46d6-b48f-07d85cd91518" manual="true">
+      <element uuid="f40dfc2e-b734-4b6d-a0ba-12c63b3dae42" manual="true">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>l_cam_img_in_conn</seg>
+      </bo>
+    </element>
+    <element uuid="33a1636e-ac0d-4417-be32-7eb0f5ab6ac9" manual="true">
+      <element uuid="76895ef6-277d-43c7-abdf-70162b717200" manual="true">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>l_cam_img_out_conn</seg>
+      </bo>
+    </element>
+    <element uuid="2c01c6b7-66c6-41d0-81b6-f50a9f33fb11" manual="true">
+      <element uuid="20ea1be0-7741-45f5-b7aa-7625343052a3" manual="true">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>l_cam_img_save</seg>
+      </bo>
+      <bendpoints>
+        <point x="668.0" y="192.0"/>
+        <point x="668.0" y="322.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="c8ab99bf-023f-487d-a59f-92f1e199834a" manual="true">
+      <element uuid="aa7d2625-0e3c-4724-b86f-f4e3eff5c5ba" manual="true">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>l_cam_img_stream</seg>
+      </bo>
+      <bendpoints>
+        <point x="697.0" y="192.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="b59043fe-c332-4d68-9cc2-4f947100c300" manual="true">
+      <element uuid="438be662-fa87-4010-8752-44709791c699" manual="true">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>laser_data_in</seg>
+      </bo>
+    </element>
+    <element uuid="bebc3a6c-8c5c-4ff3-9b7c-01b35fe92445" manual="true">
+      <element uuid="96f3c218-707e-4f80-9a3a-8caccb514586" manual="true">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>laser_data_save</seg>
+      </bo>
+    </element>
+    <element uuid="ba527bb4-4e5b-4151-9f00-7b1385ba9588" manual="true">
+      <element uuid="feab1d75-cceb-46f5-88db-80df23baae27" manual="true">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>laser_trigger_conn</seg>
+      </bo>
+    </element>
+    <element uuid="d4413eb4-faf5-4237-b99b-fbce0d49a92b" manual="true">
+      <element uuid="210e26f4-dda1-4672-b057-ab4e766498f3" manual="true">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>r_cam_img_in_conn</seg>
+      </bo>
+    </element>
+    <element uuid="c3ed693c-8def-46b3-8451-a9910c4a2772" manual="true">
+      <element uuid="8ae62dc9-396e-4cb3-ab34-c2a2cc3be581" manual="true">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>r_cam_img_out_conn</seg>
+      </bo>
+    </element>
+    <element uuid="ab8c7726-b9f8-4f39-acb3-b5600e32d4b0" manual="true">
+      <element uuid="a72b18a6-7c2a-457f-8da0-fa6abb088a2d" manual="true">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>r_cam_img_save</seg>
+      </bo>
+      <bendpoints>
+        <point x="678.0" y="142.0"/>
+        <point x="678.0" y="272.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="2cf1d09e-9894-4abb-835d-46484cb4beef" manual="true">
+      <element uuid="d91d7f17-ee8c-4e46-9d36-ef170ded1529" manual="true">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>r_cam_img_stream</seg>
+      </bo>
+      <bendpoints>
+        <point x="697.0" y="140.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="0a476a70-232b-4357-8208-44897ea11d15" manual="true" dockArea="left">
+      <bo>
+        <seg>feature</seg>
+        <seg>cameras_trigger</seg>
+      </bo>
+      <position y="49.0"/>
+    </element>
+    <element uuid="652c090c-2131-4e56-93e1-0bf617065aa5" manual="true" dockArea="left">
+      <bo>
+        <seg>feature</seg>
+        <seg>control_data</seg>
+      </bo>
+      <position y="593.0"/>
+    </element>
+    <element uuid="d69acc9b-aa62-42d7-8574-f01dd92b64d6" manual="true" dockArea="right">
+      <bo>
+        <seg>feature</seg>
+        <seg>flash_mem_out</seg>
+      </bo>
+      <position x="1242.0" y="303.0"/>
+    </element>
+    <element uuid="70e1aa9a-393f-494f-b26c-d9a4952d6420" manual="true" dockArea="left">
+      <bo>
+        <seg>feature</seg>
+        <seg>gps_data</seg>
+      </bo>
+      <position y="458.0"/>
+    </element>
+    <element uuid="ca43a581-94ba-4520-ae27-e9a77a0596f4" manual="true" dockArea="left">
+      <bo>
+        <seg>feature</seg>
+        <seg>gps_trigger</seg>
+      </bo>
+      <position y="508.0"/>
+    </element>
+    <element uuid="46eda9e5-d7f7-4bf1-a477-0651862e29f6" manual="true" dockArea="left">
+      <bo>
+        <seg>feature</seg>
+        <seg>l_cam_img_in</seg>
+      </bo>
+      <position y="109.0"/>
+    </element>
+    <element uuid="68d4a120-e342-4129-8d7d-795c363aefc0" manual="true" dockArea="right">
+      <bo>
+        <seg>feature</seg>
+        <seg>l_cam_img_out</seg>
+      </bo>
+      <position x="1242.0" y="109.0"/>
+    </element>
+    <element uuid="10af79ea-2fdb-49e8-8466-c7804a0efd36" manual="true" dockArea="left">
+      <bo>
+        <seg>feature</seg>
+        <seg>laser_data</seg>
+      </bo>
+      <position y="328.0"/>
+    </element>
+    <element uuid="ea7d0dbf-99f0-4abf-97ba-a9dd3fe8fef7" manual="true" dockArea="left">
+      <bo>
+        <seg>feature</seg>
+        <seg>laser_trigger</seg>
+      </bo>
+      <position y="378.0"/>
+    </element>
+    <element uuid="bb31b459-3665-456b-b9cd-ceef7d116bc1" manual="true" dockArea="left">
+      <bo>
+        <seg>feature</seg>
+        <seg>r_cam_img_in</seg>
+      </bo>
+      <position y="154.0"/>
+    </element>
+    <element uuid="29f8fdf1-8fd8-4416-8d38-2e738e150675" manual="true" dockArea="right">
+      <bo>
+        <seg>feature</seg>
+        <seg>r_cam_img_out</seg>
+      </bo>
+      <position x="1241.0" y="58.0"/>
+    </element>
+    <element uuid="84e98375-1a3e-4782-9e71-28886d56d65c" manual="true">
+      <element uuid="59322fd7-f954-40f8-bc78-f75417147578" manual="true" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>flash_mem_data_out</seg>
+        </bo>
+        <position x="332.0" y="85.0"/>
+      </element>
+      <element uuid="10c7926a-262c-4299-b473-d701a448458f" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>gps_data_in</seg>
+        </bo>
+        <position y="160.0"/>
+      </element>
+      <element uuid="6daa4c3a-f13e-4bb6-8ddc-56bf76e8b176" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>l_camera_img_in</seg>
+        </bo>
+        <position y="60.0"/>
+      </element>
+      <element uuid="8d7f6d9b-7b99-41c0-a8a2-5b54253d1524" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>laser_data_in</seg>
+        </bo>
+        <position y="110.0"/>
+      </element>
+      <element uuid="722dfab4-fe4c-45ba-842b-9594e3ac6132" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>r_camera_img_in</seg>
+        </bo>
+        <position y="10.0"/>
+      </element>
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>data_saver_thread</seg>
+      </bo>
+      <position x="689.0" y="218.0"/>
+      <size width="484.0" height="210.0"/>
+    </element>
+    <element uuid="2f6e604d-5c91-48a5-8f9f-2cc9d61da086" manual="true">
+      <element uuid="25855ce1-4da7-419f-ac05-2e1b67db1d29" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>gps_data_in</seg>
+        </bo>
+        <position y="10.0"/>
+      </element>
+      <element uuid="27c45f2c-e28f-422a-a635-e63bcd541db3" manual="true" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>gps_data_out</seg>
+        </bo>
+        <position x="340.0" y="10.0"/>
+      </element>
+      <element uuid="367b3852-a56a-4605-b4c0-4c67f565d246" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>gps_trigger</seg>
+        </bo>
+        <position y="60.0"/>
+      </element>
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>gps_data_collector_thread</seg>
+      </bo>
+      <position x="176.0" y="448.0"/>
+      <size width="442.0" height="110.0"/>
+    </element>
+    <element uuid="653dc5cc-1b60-4168-9e04-b0e9064da389" manual="true">
+      <element uuid="e178ccd8-94bb-4b50-b16a-a39112abe410" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>laser_data_in</seg>
+        </bo>
+        <position y="10.0"/>
+      </element>
+      <element uuid="f3336b50-5525-4b93-a6f7-c9b9d15ede99" manual="true" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>laser_data_out</seg>
+        </bo>
+        <position x="360.0" y="10.0"/>
+      </element>
+      <element uuid="40140ede-a3b2-4f49-ba89-e3c10a30de89" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>laser_trigger</seg>
+        </bo>
+        <position y="60.0"/>
+      </element>
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>laser_data_collector_thread</seg>
+      </bo>
+      <position x="156.0" y="318.0"/>
+      <size width="471.0" height="120.0"/>
+    </element>
+    <element uuid="3c03d6c5-bd66-40ad-922e-e4a7acf59e23" manual="true">
+      <element uuid="f503a400-1319-450a-a2ad-bdbadd5c6c03" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>cameras_trigger</seg>
+        </bo>
+        <position y="10.0"/>
+      </element>
+      <element uuid="7d1fe44e-7053-4606-97f7-c3ac4f5b367d" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>l_camera_img_in</seg>
+        </bo>
+        <position y="70.0"/>
+      </element>
+      <element uuid="6599ecb1-6907-4671-8393-dd5a60265d0a" manual="true" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>l_camera_img_out</seg>
+        </bo>
+        <position x="391.0" y="110.0"/>
+      </element>
+      <element uuid="74fad626-f5c9-4184-b792-f1a1c594490d" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>r_camera_img_in</seg>
+        </bo>
+        <position y="115.0"/>
+      </element>
+      <element uuid="aecc384c-c0f9-4b68-9987-172ba5bfbd82" manual="true" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>r_camera_img_out</seg>
+        </bo>
+        <position x="390.0" y="60.0"/>
+      </element>
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>stereo_img_collector_thread</seg>
+      </bo>
+      <position x="119.0" y="38.0"/>
+      <size width="527.0" height="160.0"/>
+    </element>
+    <element uuid="72ae03d1-d07a-48be-bda9-99fddde76c32" manual="true">
+      <element uuid="9b4ce5a9-d5be-4138-a8da-17e7b02d00b4" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>control_data</seg>
+        </bo>
+        <position y="10.0"/>
+      </element>
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>wifi_control_data_collector_thread</seg>
+      </bo>
+      <position x="119.0" y="578.0"/>
+      <size width="493.0" height="60.0"/>
+    </element>
+    <element uuid="6ec5ac8c-0f87-46de-8528-79f0e5d5397a" manual="true">
+      <element uuid="5f28553b-5426-4f66-b132-d5780d3b8822" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>l_camera_img_in</seg>
+        </bo>
+        <position y="60.0"/>
+      </element>
+      <element uuid="2b1f45b3-0444-48af-898d-7019228071a9" manual="true" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>l_camera_img_out</seg>
+        </bo>
+        <position x="411.0" y="60.0"/>
+      </element>
+      <element uuid="e96d4e90-0050-4fe9-8929-175ee4b5cfa0" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>r_camera_img_in</seg>
+        </bo>
+        <position y="10.0"/>
+      </element>
+      <element uuid="1aed60d6-5c1e-4b4b-9afb-d06b7aac70ad" manual="true" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>r_camera_img_out</seg>
+        </bo>
+        <position x="410.0" y="10.0"/>
+      </element>
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>wifi_video_data_sender_thread</seg>
+      </bo>
+      <position x="718.0" y="49.0"/>
+      <size width="547.0" height="110.0"/>
+    </element>
+    <bo>
+      <seg>classifier</seg>
+      <seg>controller.withthreads</seg>
+    </bo>
+    <position x="12.0" y="12.0"/>
+    <size width="1356.0" height="650.0"/>
+  </element>
   <config type="structure" connectionPrimaryLabelsVisible="false">
     <enabledAadlProperties/>
     <context>
