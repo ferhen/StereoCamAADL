@@ -42,10 +42,10 @@ public
 			
 			
 			
-			l_cam_trigger: port this_camera_l.camera_trigger -> this_controller.cameras_trigger;
-			r_cam_trigger: port this_camera_r.camera_trigger -> this_controller.cameras_trigger;
-			laser_trigger: port this_laser.proc_evt -> this_controller.laser_trigger;
-			gps_trigger: port this_gps.gps_trigger -> this_controller.gps_trigger;
+			l_cam_trigger: port this_controller.cameras_trigger -> this_camera_l.camera_trigger;
+			r_cam_trigger: port this_controller.cameras_trigger -> this_camera_r.camera_trigger;
+			laser_trigger: port this_controller.laser_trigger -> this_laser.proc_evt;
+			gps_trigger: port this_controller.gps_trigger -> this_gps.gps_trigger;
 		properties
 			Actual_Processor_Binding => (reference (this_A57)) applies to this_controller;
 	end vantSystem.with_devices;
@@ -72,9 +72,13 @@ public
 -----------------------
 	process controller
 		features
-			cameras_trigger: in event port;
-			laser_trigger: in event port;
-			gps_trigger: in event port;
+			cameras_trigger: out event port;
+			l_cam_img: in data port StereoCamAADL_Data::camera_image.impl;
+			r_cam_img: in data port StereoCamAADL_Data::camera_image.impl;
+			laser_trigger: out event port;
+			laser_data: in data port StereoCamAADL_Data::laser_data.impl;
+			gps_trigger: out event port;
+			gps_data: in data port StereoCamAADL_Data::gps_data.impl;
 			control_data: out data port StereoCamAADL_Data::control_data.impl;
 	end controller;		
 
@@ -87,15 +91,19 @@ public
 			wifi_control_data_collector_thread: thread StereoCamAADL_Threads::wifi_control_data_collector.impl;
 			wifi_video_data_sender_thread: thread StereoCamAADL_Threads::wifi_video_data_sender.impl;
 		connections
-			cameras_trigger_conn: port cameras_trigger -> stereo_img_collector_thread.cameras_trigger;
+			cameras_trigger_conn: port stereo_img_collector_thread.cameras_trigger -> cameras_trigger;
+			l_cam_img_in: port l_cam_img -> stereo_img_collector_thread.l_camera_img_in;
+			r_cam_img_in: port r_cam_img -> stereo_img_collector_thread.r_camera_img_in;
 			l_cam_img_save: port stereo_img_collector_thread.l_camera_img_out -> data_saver_thread.l_camera_img_in;
 			r_cam_img_save: port stereo_img_collector_thread.r_camera_img_out -> data_saver_thread.r_camera_img_in;
 			
-			laser_trigger_conn: port laser_trigger -> laser_data_collector_thread.laser_trigger;
-			laser_data: port laser_data_collector_thread.laser_data_out -> data_saver_thread.laser_data_in;
+			laser_trigger_conn: port laser_data_collector_thread.laser_trigger -> laser_trigger;
+			laser_data_in: port laser_data -> laser_data_collector_thread.laser_data_in;
+			laser_data_save: port laser_data_collector_thread.laser_data_out -> data_saver_thread.laser_data_in;
 			
-			gps_trigger_conn: port gps_trigger -> gps_data_collector_thread.gps_trigger;
-			gps_data: port gps_data_collector_thread.gps_data_out -> data_saver_thread.gps_data_in;
+			gps_trigger_conn: port gps_data_collector_thread.gps_trigger -> gps_trigger;
+			gps_data_in: port gps_data -> gps_data_collector_thread.gps_data_in;
+			gps_data_save: port gps_data_collector_thread.gps_data_out -> data_saver_thread.gps_data_in;
 			
 			l_cam_img_stream: port stereo_img_collector_thread.l_camera_img_out -> wifi_video_data_sender_thread.l_camera_img_in;
 			r_cam_img_stream: port stereo_img_collector_thread.r_camera_img_out -> wifi_video_data_sender_thread.r_camera_img_in;
