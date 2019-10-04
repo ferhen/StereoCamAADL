@@ -192,7 +192,7 @@
       <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
         <property href="platform:/plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/Timing_Properties.aadl#Timing_Properties.Period"/>
         <ownedValue>
-          <ownedValue xsi:type="aadl2:IntegerLiteral" value="100">
+          <ownedValue xsi:type="aadl2:IntegerLiteral" value="1000">
             <unit href="platform:/plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
           </ownedValue>
         </ownedValue>
@@ -202,10 +202,10 @@
         <property href="platform:/plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/Timing_Properties.aadl#Timing_Properties.Compute_Execution_Time"/>
         <ownedValue>
           <ownedValue xsi:type="aadl2:RangeValue">
-            <minimum xsi:type="aadl2:IntegerLiteral" value="2">
+            <minimum xsi:type="aadl2:IntegerLiteral" value="20">
               <unit href="platform:/plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
             </minimum>
-            <maximum xsi:type="aadl2:IntegerLiteral" value="10">
+            <maximum xsi:type="aadl2:IntegerLiteral" value="100">
               <unit href="platform:/plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
             </maximum>
           </ownedValue>
@@ -215,7 +215,7 @@
       <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
         <property href="platform:/plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/Timing_Properties.aadl#Timing_Properties.Deadline"/>
         <ownedValue>
-          <ownedValue xsi:type="aadl2:IntegerLiteral" value="100">
+          <ownedValue xsi:type="aadl2:IntegerLiteral" value="1000">
             <unit href="platform:/plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
           </ownedValue>
         </ownedValue>
@@ -224,7 +224,7 @@
       <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
         <property href="platform:/plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/Thread_Properties.aadl#Thread_Properties.Priority"/>
         <ownedValue>
-          <ownedValue xsi:type="aadl2:IntegerLiteral" value="1"/>
+          <ownedValue xsi:type="aadl2:IntegerLiteral" value="3"/>
         </ownedValue>
         <propertyAssociation href="../StereoCamAADL_Threads.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.4"/>
       </ownedPropertyAssociation>
@@ -346,7 +346,7 @@
       <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
         <property href="platform:/plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/Thread_Properties.aadl#Thread_Properties.Priority"/>
         <ownedValue>
-          <ownedValue xsi:type="aadl2:IntegerLiteral" value="1"/>
+          <ownedValue xsi:type="aadl2:IntegerLiteral" value="6"/>
         </ownedValue>
         <propertyAssociation href="../StereoCamAADL_Threads.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedPropertyAssociation.4"/>
       </ownedPropertyAssociation>
@@ -444,7 +444,7 @@
       <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
         <property href="platform:/plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/Thread_Properties.aadl#Thread_Properties.Priority"/>
         <ownedValue>
-          <ownedValue xsi:type="aadl2:IntegerLiteral" value="2"/>
+          <ownedValue xsi:type="aadl2:IntegerLiteral" value="4"/>
         </ownedValue>
         <propertyAssociation href="../StereoCamAADL_Threads.aadl#/0/@ownedPublicSection/@ownedClassifier.4/@ownedPropertyAssociation.4"/>
       </ownedPropertyAssociation>
@@ -498,7 +498,7 @@
       <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
         <property href="platform:/plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/Timing_Properties.aadl#Timing_Properties.Period"/>
         <ownedValue>
-          <ownedValue xsi:type="aadl2:IntegerLiteral" value="400">
+          <ownedValue xsi:type="aadl2:IntegerLiteral" value="200">
             <unit href="platform:/plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
           </ownedValue>
         </ownedValue>
@@ -521,7 +521,7 @@
       <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
         <property href="platform:/plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/Timing_Properties.aadl#Timing_Properties.Deadline"/>
         <ownedValue>
-          <ownedValue xsi:type="aadl2:IntegerLiteral" value="400">
+          <ownedValue xsi:type="aadl2:IntegerLiteral" value="200">
             <unit href="platform:/plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
           </ownedValue>
         </ownedValue>
@@ -530,7 +530,7 @@
       <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
         <property href="platform:/plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/Thread_Properties.aadl#Thread_Properties.Priority"/>
         <ownedValue>
-          <ownedValue xsi:type="aadl2:IntegerLiteral" value="2"/>
+          <ownedValue xsi:type="aadl2:IntegerLiteral" value="5"/>
         </ownedValue>
         <propertyAssociation href="../StereoCamAADL_Threads.aadl#/0/@ownedPublicSection/@ownedClassifier.6/@ownedPropertyAssociation.4"/>
       </ownedPropertyAssociation>
