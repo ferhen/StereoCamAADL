@@ -100,10 +100,10 @@ public
 		properties
 			Scheduling_Protocols => Rate_Monotonic_Protocol;
 			Dispatch_protocol => periodic;
-			period => 400 ms;
-			compute_execution_time => 10 ms .. 20 ms;
-			deadline => 700 ms;
-			priority => 2;
+			period => 10 ms;
+			compute_execution_time => 1 ms .. 2 ms;
+			deadline => 10 ms;
+			priority => 30;
 			--POSIX_Scheduling_Policy => SCHED_FIFO;	
 	end wifi_control_data_collector;
 	
@@ -133,6 +133,7 @@ public
 
 	
 end StereoCamAADL_Threads;
+
 
 
 
