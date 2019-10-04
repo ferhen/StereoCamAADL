@@ -1,15 +1,14 @@
 package StereoCamAADL_Devices
 public
-
 	with Buses::USB;
 
 	with Buses::misc;
-	
+
 	with StereoCamAADL_Data;
-	
+
 	with Buses::Ethernet;
-	
-	with Memories;
+
+	with Buses::UART;
 
 	-----------------------
 	-------CAMERA----------
@@ -31,22 +30,21 @@ public
 		features
 			Serial_Wire: requires bus access Buses::Ethernet::Ethernet.impl;
 			Supply: requires bus access buses::misc::V12_Bus.impl;
-			proc_evt: in event port;
 			laser_data_out: out data port StereoCamAADL_Data::laser_data.impl;
+			proc_evt: in event port;
 	end laser;
 
 	device implementation laser.impl
 	end laser.impl;
-
-
 
 	-----------------------
 	---------GPS-----------
 	-----------------------
 	device GPS
 		features
-			gps_trigger: in event port;
 			gps_data_out: out data port StereoCamAADL_Data::gps_data.impl;
+			gps_bus: requires bus access Buses::UART::UART.impl;
+			gps_trigger: in event port;
 	end GPS;
 
 	device implementation GPS.impl
@@ -54,9 +52,7 @@ public
 			Dispatch_Protocol => Periodic;
 			Period => 50ms; --  50 Hz
 	end GPS.impl;
-	
-	
-	
+
 	-----------------------
 	-------SD CARD---------
 	-----------------------
