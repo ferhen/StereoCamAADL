@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="ASCII"?>
+<diagram:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:diagram="http://osate.org/diagram" formatVersion="7">
+  <element uuid="27234e65-9dbb-4a57-b821-ae9cb620f0d6" manual="true">
+    <element uuid="eb83ba4c-5918-4fcd-b35b-1ee7b7509f79" manual="true">
+      <element uuid="8d70da9f-f049-4ce1-b1ec-c4b13dc4f9bf" manual="true">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>bus_usb_1_a57</seg>
+      </bo>
+      <bendpoints>
+        <point x="421.0" y="922.0"/>
+        <point x="457.0" y="922.0"/>
+        <point x="457.0" y="912.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="1fe081ff-02d3-4f95-9a4c-22c216a49a45" manual="true">
+      <element uuid="8a60c28d-2ca7-4f08-a356-53c75a9565b1" manual="true">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>bus_usb_1_cam_l</seg>
+      </bo>
+      <bendpoints>
+        <point x="421.0" y="910.3333333333333"/>
+        <point x="447.0" y="910.3333333333333"/>
+        <point x="447.0" y="682.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="23112dbf-d87e-4fed-aad5-9afada810e7f" manual="true">
+      <element uuid="da95c234-8622-47a4-998c-fe72320d3954" manual="true">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>bus_usb_2_a57</seg>
+      </bo>
+      <bendpoints>
+        <point x="421.0" y="867.0"/>
+        <point x="457.0" y="867.0"/>
+        <point x="457.0" y="862.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="49c71215-a2e5-4ecd-979c-b592bfe81e1f" manual="true">
+      <element uuid="d35726f2-8d72-4875-bb34-a52715ee2e49" manual="true">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>bus_usb_2_cam_r</seg>
+      </bo>
+      <bendpoints>
+        <point x="421.0" y="855.3333333333333"/>
+        <point x="437.0" y="855.3333333333333"/>
+        <point x="437.0" y="502.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="90f28ffa-96a5-43b0-987c-109133857fc0" manual="true">
+      <element uuid="357103a7-0fb1-43a2-b09e-ef76ce4f0641" manual="true">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>bus_usb_3_a57</seg>
+      </bo>
+      <bendpoints>
+        <point x="417.0" y="812.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="897960c6-0de9-4c0f-8795-2258d037a735" manual="true">
+      <element uuid="f21b8191-b60a-4959-bdab-f75ad6f4947b" manual="true">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>bus_usb_3_laser</seg>
+      </bo>
+      <bendpoints>
+        <point x="421.0" y="800.3333333333333"/>
+        <point x="427.0" y="800.3333333333333"/>
+        <point x="427.0" y="272.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="26cc34d8-8218-4a51-812e-c6c050d9533e" manual="true">
+      <element uuid="362e8440-4cbc-4151-aa08-b1170be61a29" manual="true">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>gps_trigger</seg>
+      </bo>
+      <bendpoints>
+        <point x="427.0" y="147.0"/>
+        <point x="427.0" y="92.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="22c0138a-7e62-449d-937e-a74f31c6b8f2" manual="true">
+      <element uuid="fb041831-1ad3-4d95-9e6c-9619ff01c042" manual="true">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>l_cam_trigger</seg>
+      </bo>
+      <bendpoints>
+        <point x="447.0" y="297.0"/>
+        <point x="447.0" y="632.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="5f2c53a1-c875-44f5-8ba7-97413d8030b0" manual="true">
+      <element uuid="c9035a82-949d-4d1b-bd5a-a74a6540b8d3" manual="true">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>laser_trigger</seg>
+      </bo>
+    </element>
+    <element uuid="d9d618eb-6327-49b1-8468-ff8091c7d693" manual="true">
+      <element uuid="da56e24d-16bc-473f-8953-a0dde8640a1d" manual="true">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>r_cam_trigger</seg>
+      </bo>
+      <bendpoints>
+        <point x="447.0" y="297.0"/>
+        <point x="447.0" y="452.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="c465337a-6d60-4cd0-b087-8b5d4490e9f1" manual="true">
+      <element uuid="eee9b6d8-1274-411c-8f66-aa25de44b4b4" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>ethernet</seg>
+        </bo>
+        <position y="10.0"/>
+      </element>
+      <element uuid="4bbccacd-4007-48ef-931f-3ffda597eb36" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>i2c_bus</seg>
+        </bo>
+        <position y="160.0"/>
+      </element>
+      <element uuid="53ca61ce-b56c-4dc0-aa83-4599a46e4561" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>usb_bus_1</seg>
+        </bo>
+        <position y="110.0"/>
+      </element>
+      <element uuid="bc712624-943a-4e7b-b03c-42097dcf0dff" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>usb_bus_2</seg>
+        </bo>
+        <position y="60.0"/>
+      </element>
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>this_a57</seg>
+      </bo>
+      <position x="455.0" y="758.0"/>
+      <size width="278.0" height="210.0"/>
+    </element>
+    <element uuid="0b2b3b65-f881-4f89-84e7-e015a037086b" manual="true">
+      <element uuid="2133e91e-4a98-455b-bdf7-8f50829f9755" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>camera_trigger</seg>
+        </bo>
+        <position y="10.0"/>
+      </element>
+      <element uuid="b1dcda30-6ffb-4107-9b3d-1edd0dd00a09" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>imgout</seg>
+        </bo>
+        <position y="110.0"/>
+      </element>
+      <element uuid="9cc22728-c50d-4ccc-8b1b-8b628317c22d" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>usbport</seg>
+        </bo>
+        <position y="60.0"/>
+      </element>
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>this_camera_l</seg>
+      </bo>
+      <position x="455.0" y="578.0"/>
+      <size width="382.0" height="160.0"/>
+    </element>
+    <element uuid="821ae86f-6444-4dbe-befd-c9c8de2ef94d" manual="true">
+      <element uuid="4be6364f-c5fb-46d8-a16c-7529f86772e9" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>camera_trigger</seg>
+        </bo>
+        <position y="10.0"/>
+      </element>
+      <element uuid="bc1fa9bc-6f1e-4eb3-857b-e7c2aecb8004" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>imgout</seg>
+        </bo>
+        <position y="110.0"/>
+      </element>
+      <element uuid="8dea64b0-18a1-4c53-a582-acd1dc53bb27" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>usbport</seg>
+        </bo>
+        <position y="60.0"/>
+      </element>
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>this_camera_r</seg>
+      </bo>
+      <position x="455.0" y="398.0"/>
+      <size width="383.0" height="160.0"/>
+    </element>
+    <element uuid="9d8ad7b6-05ad-4b23-9209-21be628d782c" manual="true">
+      <element uuid="b9287f0b-a909-450c-8464-3c185370ddd1" manual="true" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>cameras_trigger</seg>
+        </bo>
+        <position x="272.0" y="185.0"/>
+      </element>
+      <element uuid="75c6a01e-254a-4db0-8209-06291741b0e8" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>control_data</seg>
+        </bo>
+        <position y="60.0"/>
+      </element>
+      <element uuid="cd3398d5-8312-4b8a-87b6-c63c92f01cd8" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>gps_data</seg>
+        </bo>
+        <position y="210.0"/>
+      </element>
+      <element uuid="025e758f-69dd-4da3-b4c8-541ea0d61db8" manual="true" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>gps_trigger</seg>
+        </bo>
+        <position x="304.0" y="35.0"/>
+      </element>
+      <element uuid="d795b963-782a-458e-897e-397f04d5ec43" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>l_cam_img</seg>
+        </bo>
+        <position y="10.0"/>
+      </element>
+      <element uuid="e77b1dee-19eb-405f-af18-4b6580ef235f" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>laser_data</seg>
+        </bo>
+        <position y="160.0"/>
+      </element>
+      <element uuid="1fb3b2fa-04f6-4fdb-a734-e0779b2ac467" manual="true" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>laser_trigger</seg>
+        </bo>
+        <position x="295.0" y="110.0"/>
+      </element>
+      <element uuid="ed6d47e9-2c68-4cb5-be09-c8656b4cc001" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>r_cam_img</seg>
+        </bo>
+        <position y="110.0"/>
+      </element>
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>this_controller</seg>
+      </bo>
+      <position x="12.0" y="68.0"/>
+      <size width="393.0" height="260.0"/>
+    </element>
+    <element uuid="6071ceb4-a861-439c-abbb-2dd81f0ef03c" manual="true">
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>this_ethernet</seg>
+      </bo>
+      <position x="263.0" y="777.0"/>
+      <size width="142.0" height="35.0"/>
+    </element>
+    <element uuid="b0469b3e-a266-42f3-9d28-0787301f2dbe" manual="true">
+      <element uuid="5f8bd2af-5a10-4114-891f-94e88d4559be" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>gps_data_out</seg>
+        </bo>
+        <position y="60.0"/>
+      </element>
+      <element uuid="80abc542-785e-43f3-97b3-8b699ed2ea0c" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>gps_trigger</seg>
+        </bo>
+        <position y="10.0"/>
+      </element>
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>this_gps</seg>
+      </bo>
+      <position x="455.0" y="38.0"/>
+      <size width="315.0" height="110.0"/>
+    </element>
+    <element uuid="b3d8e380-7251-4b9f-aeae-6cfc23e6de25" manual="true">
+      <element uuid="bd3600bf-4f6d-41c6-a1ed-f53f98c4eed8" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>laser_data_out</seg>
+        </bo>
+        <position y="160.0"/>
+      </element>
+      <element uuid="cdd06377-6161-4690-8125-34160831ca58" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>proc_evt</seg>
+        </bo>
+        <position y="10.0"/>
+      </element>
+      <element uuid="12118f2a-3143-4fbc-9d52-1d12dc058d89" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>serial_wire</seg>
+        </bo>
+        <position y="60.0"/>
+      </element>
+      <element uuid="c379056c-a81d-4e1e-a16b-270339637e79" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>supply</seg>
+        </bo>
+        <position y="110.0"/>
+      </element>
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>this_laser</seg>
+      </bo>
+      <position x="455.0" y="168.0"/>
+      <size width="342.0" height="210.0"/>
+    </element>
+    <element uuid="e942debe-aebf-4bd7-8858-97ee2dce1cb0" manual="true">
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>this_usb_1</seg>
+      </bo>
+      <position x="280.0" y="887.0"/>
+      <size width="125.0" height="35.0"/>
+    </element>
+    <element uuid="8c217385-f1ee-4ce5-bd7d-e7843392cd82" manual="true">
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>this_usb_2</seg>
+      </bo>
+      <position x="280.0" y="832.0"/>
+      <size width="125.0" height="35.0"/>
+    </element>
+    <bo>
+      <seg>classifier</seg>
+      <seg>vantsystem.with_devices</seg>
+    </bo>
+    <position x="12.0" y="12.0"/>
+    <size width="850.0" height="980.0"/>
+  </element>
+  <config type="structure" connectionPrimaryLabelsVisible="false">
+    <enabledAadlProperties/>
+    <context>
+      <seg>classifier</seg>
+      <seg>streocamaadl::vantsystem.with_devices</seg>
+    </context>
+  </config>
+</diagram:Diagram>

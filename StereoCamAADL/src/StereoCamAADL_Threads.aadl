@@ -16,7 +16,7 @@ thread data_saver
 		laser_data_in: in data port StereoCamAADL_Data::laser_data.impl;
 		flash_mem_data_out: out data port StereoCamAADL_Data::flash_mem_data.impl;
 	properties
-		Scheduling_Protocols => Rate_Monotonic_Protocol;
+	--	Scheduling_Protocols => Rate_Monotonic_Protocol;
 		Dispatch_protocol => periodic;
 		period => 1000 ms;
 		compute_execution_time => 20 ms .. 100 ms; --Depende da velocidade dos dados (?)
@@ -40,7 +40,7 @@ thread stereo_img_collector
 		l_camera_img_out: out data port StereoCamAADL_Data::camera_image.impl;
 		r_camera_img_out: out data port StereoCamAADL_Data::camera_image.impl;
 	properties
-		Scheduling_Protocols => Rate_Monotonic_Protocol;
+	--	Scheduling_Protocols => Rate_Monotonic_Protocol;
 		Dispatch_protocol => periodic;
 		period => 100 ms;
 		compute_execution_time => 2 ms .. 10 ms;
@@ -60,7 +60,7 @@ thread laser_data_collector
 		laser_data_in: in data port StereoCamAADL_Data::laser_data.impl;
 		laser_data_out: out data port StereoCamAADL_Data::laser_data.impl;
 	properties
-		Scheduling_Protocols => Rate_Monotonic_Protocol;
+	--	Scheduling_Protocols => Rate_Monotonic_Protocol;
 		Dispatch_protocol => periodic;
 		period => 400 ms;
 		compute_execution_time => 10 ms .. 20 ms;
@@ -80,7 +80,7 @@ thread gps_data_collector
 		gps_data_in: in data port StereoCamAADL_Data::gps_data.impl;
 		gps_data_out: out data port StereoCamAADL_Data::gps_data.impl;
 	properties
-		Scheduling_Protocols => Rate_Monotonic_Protocol;
+	--	Scheduling_Protocols => Rate_Monotonic_Protocol;
 		Dispatch_protocol => periodic;
 		period => 200 ms;
 		compute_execution_time => 10 ms .. 20 ms;
@@ -98,7 +98,7 @@ thread wifi_control_data_collector
 	features
 		control_data: out data port StereoCamAADL_Data::control_data.impl;
 	properties
-		Scheduling_Protocols => Rate_Monotonic_Protocol;
+	--	Scheduling_Protocols => Rate_Monotonic_Protocol;
 		Dispatch_protocol => periodic;
 		period => 400 ms;
 		compute_execution_time => 10 ms .. 20 ms;
@@ -117,7 +117,7 @@ thread wifi_video_data_sender
 		l_camera_img_in: in data port StereoCamAADL_Data::camera_image.impl;
 		r_camera_img_in: in data port StereoCamAADL_Data::camera_image.impl;
 	properties
-		Scheduling_Protocols => Rate_Monotonic_Protocol;
+	--	Scheduling_Protocols => Rate_Monotonic_Protocol;
 		Dispatch_protocol => periodic;
 		period => 100 ms;
 		compute_execution_time => 10 ms .. 20 ms;
