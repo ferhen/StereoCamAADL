@@ -70,8 +70,10 @@ public
 -----------------------
 	process controller
 		features
-			l_camera_img_in: in data port StereoCamAADL_Data::camera_image.impl;
-			r_camera_img_in: in data port StereoCamAADL_Data::camera_image.impl;
+			cameras_trigger: in event port;
+			laser_trigger: in event port;
+			gps_trigger: in event port;
+			control_data: out data port StereoCamAADL_Data::control_data.impl;
 	end controller;		
 
 	process implementation controller.withThreads
@@ -83,21 +85,22 @@ public
 			wifi_control_data_collector_thread: thread StereoCamAADL_Threads::wifi_control_data_collector.impl;
 			wifi_video_data_sender_thread: thread StereoCamAADL_Threads::wifi_video_data_sender.impl;
 		connections
-			l_cam_img: port l_camera_img_in -> stereo_img_collector_thread.l_camera_img_in;
-			r_cam_img: port r_camera_img_in -> stereo_img_collector_thread.r_camera_img_in;
+			cameras_trigger_conn: port cameras_trigger -> stereo_img_collector_thread.cameras_trigger;
+			l_cam_img_save: port stereo_img_collector_thread.l_camera_img_out -> data_saver_thread.l_camera_img_in;
+			r_cam_img_save: port stereo_img_collector_thread.r_camera_img_out -> data_saver_thread.r_camera_img_in;
+			
+			laser_trigger_conn: port laser_trigger -> laser_data_collector_thread.laser_trigger;
+			laser_data: port laser_data_collector_thread.laser_data_out -> data_saver_thread.laser_data_in;
+			
+			gps_trigger_conn: port gps_trigger -> gps_data_collector_thread.gps_trigger;
+			gps_data: port gps_data_collector_thread.gps_data_out -> data_saver_thread.gps_data_in;
+			
+			l_cam_img_stream: port stereo_img_collector_thread.l_camera_img_out -> wifi_video_data_sender_thread.l_camera_img_in;
+			r_cam_img_stream: port stereo_img_collector_thread.r_camera_img_out -> wifi_video_data_sender_thread.r_camera_img_in;
+			
+			control_data_conn: port wifi_control_data_collector_thread.control_data -> control_data;	
 	end controller.withThreads;
 
-	process controllerLaser
-		features
-			proc_evt_In: in event port;
-	end controllerLaser;
-
-	process implementation controllerLaser.withThreads
-		subcomponents
-			this_thread_laser_processing: thread StereoCamAADL_Threads::laser_data_collector.impl;
-		connections
-			Laser_sensing: port proc_evt_In -> this_thread_laser_processing.laser_trigger;
-	end controllerLaser.withThreads;
 	
 end StreoCamAADL;
 
