@@ -33,26 +33,7 @@ public
 	device implementation laser.impl
 	end laser.impl;
 
-	subprogram Laser_Initialize
-		properties
-			Source_Name => "laser_initialize";
-			Source_Text => ("telemeter_urg04lx.c");
-			Source_Language => (C);
-	end Laser_Initialize;
 
-	subprogram Laser_Read_Acquisition
-		properties
-			Source_Name => "laser_read_acquisition";
-			Source_Text => ("telemeter_urg04lx.c");
-			Source_Language => (C);
-	end Laser_Read_Acquisition;
-
-	subprogram Laser_Start_Acquisition
-		properties
-			Source_Name => "laser_start_acquisition";
-			Source_Text => ("telemeter_urg04lx.c");
-			Source_Language => (C);
-	end Laser_Start_Acquisition;
 
 		-----------------------
 		---------GPS-----------
