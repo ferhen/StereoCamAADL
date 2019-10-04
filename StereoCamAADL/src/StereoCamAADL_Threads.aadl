@@ -84,7 +84,7 @@ end gps_data_collector.impl;
 
 thread wifi_control_data_collector
 	features
-		control_data: in data port StereoCamAADL_Data::control_data.impl;
+		control_data: out data port StereoCamAADL_Data::control_data.impl;
 	properties
 		Dispatch_protocol => periodic;
 		period => 400 ms;
