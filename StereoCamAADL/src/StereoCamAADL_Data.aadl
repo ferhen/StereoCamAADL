@@ -1,0 +1,71 @@
+package StereoCamAADL_Data
+public
+
+	with Base_Types;
+	with Data_Model;
+	
+	
+	-----------------------
+	-------CAMERA----------
+	-----------------------
+	data camera_image
+		properties
+			Data_Model::Data_Representation => Array;
+	end camera_image;
+	
+	data implementation camera_image.impl
+		subcomponents
+		    r: data Base_Types::Unsigned_8;
+		    g: data base_types::Unsigned_8;
+		    b: data base_types::Unsigned_8; 
+	end camera_image.impl;
+	
+	-----------------------
+	-------LASER-----------
+	-----------------------
+	data laser_data
+		properties
+			Data_Model::Data_Representation => Array;
+	end laser_data;
+	
+	data implementation laser_data.impl
+	end laser_data.impl;
+	
+	-----------------------
+	---------GPS-----------
+	-----------------------
+	data gps_data
+		properties
+			Data_Model::Data_Representation => Array;
+	end gps_data;
+	
+	data implementation gps_data.impl
+		subcomponents
+			latitude: data Base_Types::Float_32;
+			longitude: data Base_Types::Float_32;
+	end gps_data.impl;
+	
+	
+	-----------------------
+	-------CONTROL---------
+	-----------------------
+	data control_data
+		properties
+			Data_Model::Data_Representation => Array;
+	end control_data;
+	
+	data implementation control_data.impl
+	end control_data.impl;
+	
+	-----------------------
+	-------SD CARD---------
+	-----------------------
+
+	data flash_mem_data
+	end flash_mem_data;
+	
+	data implementation flash_mem_data.impl
+	end flash_mem_data.impl;
+	
+	
+end StereoCamAADL_Data;
