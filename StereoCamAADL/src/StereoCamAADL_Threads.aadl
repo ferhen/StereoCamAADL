@@ -16,13 +16,13 @@ thread data_saver
 		laser_data_in: in data port StereoCamAADL_Data::laser_data.impl;
 		flash_mem_data_out: out data port StereoCamAADL_Data::flash_mem_data.impl;
 	properties
-		--Scheduling_Protocols => Rate_Monotonic_Protocol;
+		Scheduling_Protocols => Rate_Monotonic_Protocol;
 		Dispatch_protocol => periodic;
 		period => 1000 ms;
 		compute_execution_time => 20 ms .. 100 ms; --Depende da velocidade dos dados (?)
 		deadline => 1000 ms;
 		priority => 3;
-		POSIX_Scheduling_Policy => SCHED_RR;	--priority based
+		--POSIX_Scheduling_Policy => SCHED_RR;	--priority based
 end data_saver;
 
 thread implementation data_saver.impl
@@ -36,13 +36,13 @@ thread stereo_img_collector
 		l_camera_img_out: out data port StereoCamAADL_Data::camera_image.impl;
 		r_camera_img_out: out data port StereoCamAADL_Data::camera_image.impl;
 	properties
-	--	Scheduling_Protocols => Rate_Monotonic_Protocol;
+		Scheduling_Protocols => Rate_Monotonic_Protocol;
 		Dispatch_protocol => periodic;
 		period => 100 ms;
 		compute_execution_time => 2 ms .. 10 ms;
-		deadline => 100 ms;
+		deadline => 1000 ms;
 		priority => 6;
-		POSIX_Scheduling_Policy => SCHED_RR;	--priority based
+		--POSIX_Scheduling_Policy => SCHED_RR;	--priority based
 end stereo_img_collector;
 
 thread implementation stereo_img_collector.impl
@@ -55,13 +55,13 @@ thread laser_data_collector
 		laser_trigger: in event port;
 		laser_data_out: out data port StereoCamAADL_Data::laser_data.impl;
 	properties
-	--	Scheduling_Protocols => Rate_Monotonic_Protocol;
+		Scheduling_Protocols => Rate_Monotonic_Protocol;
 		Dispatch_protocol => periodic;
 		period => 400 ms;
 		compute_execution_time => 10 ms .. 20 ms;
-		deadline => 400 ms;
+		deadline => 500 ms;
 		priority => 4;
-		POSIX_Scheduling_Policy => SCHED_FIFO;	
+		--POSIX_Scheduling_Policy => SCHED_FIFO;	
 end laser_data_collector;
 
 thread implementation laser_data_collector.impl
@@ -74,13 +74,13 @@ thread gps_data_collector
 		gps_trigger: in event port;
 		gps_data_out: out data port StereoCamAADL_Data::gps_data.impl;
 	properties
-		--Scheduling_Protocols => Rate_Monotonic_Protocol;
+		Scheduling_Protocols => Rate_Monotonic_Protocol;
 		Dispatch_protocol => periodic;
 		period => 200 ms;
 		compute_execution_time => 10 ms .. 20 ms;
-		deadline => 200 ms;
+		deadline => 300 ms;
 		priority => 5;
-		POSIX_Scheduling_Policy => SCHED_FIFO;	
+		--POSIX_Scheduling_Policy => SCHED_FIFO;	
 end gps_data_collector;
 
 thread implementation gps_data_collector.impl
@@ -92,13 +92,13 @@ thread wifi_control_data_collector
 	features
 		control_data: out data port StereoCamAADL_Data::control_data.impl;
 	properties
-	--	Scheduling_Protocols => Rate_Monotonic_Protocol;
+		Scheduling_Protocols => Rate_Monotonic_Protocol;
 		Dispatch_protocol => periodic;
 		period => 400 ms;
 		compute_execution_time => 10 ms .. 20 ms;
-		deadline => 400 ms;
+		deadline => 500 ms;
 		priority => 2;
-		POSIX_Scheduling_Policy => SCHED_FIFO;	
+		--POSIX_Scheduling_Policy => SCHED_FIFO;	
 end wifi_control_data_collector;
 
 thread implementation wifi_control_data_collector.impl
@@ -111,13 +111,13 @@ thread wifi_video_data_sender
 		l_camera_img_in: in data port StereoCamAADL_Data::camera_image.impl;
 		r_camera_img_in: in data port StereoCamAADL_Data::camera_image.impl;
 	properties
-	--	Scheduling_Protocols => Rate_Monotonic_Protocol;
+		Scheduling_Protocols => Rate_Monotonic_Protocol;
 		Dispatch_protocol => periodic;
 		period => 100 ms;
 		compute_execution_time => 10 ms .. 20 ms;
-		deadline => 100 ms;
+		deadline => 300 ms;
 		priority => 2;
-		POSIX_Scheduling_Policy => SCHED_FIFO;	
+		--POSIX_Scheduling_Policy => SCHED_FIFO;	
 end wifi_video_data_sender;
 
 thread implementation wifi_video_data_sender.impl
@@ -125,5 +125,6 @@ end wifi_video_data_sender.impl;
 
 	
 end StereoCamAADL_Threads;
+
 
 
