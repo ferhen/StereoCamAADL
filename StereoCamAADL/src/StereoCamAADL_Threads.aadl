@@ -16,10 +16,10 @@ public
 			laser_data_in: in data port StereoCamAADL_Data::laser_data.impl;
 			flash_mem_data_out: out data port StereoCamAADL_Data::flash_mem_data.impl;
 		properties
-		--	Scheduling_Protocols => Rate_Monotonic_Protocol;
+			Scheduling_Protocols => Rate_Monotonic_Protocol;
 			Dispatch_protocol => periodic;
 			period => 1000 ms;
-			compute_execution_time => 20 ms .. 100 ms; --Depende da velocidade dos dados (?)
+			compute_execution_time => 200 ms .. 300 ms; --Depende da velocidade dos dados (?)
 			deadline => 1000 ms;
 			priority => 3;
 			--POSIX_Scheduling_Policy => SCHED_RR;	--priority based
@@ -40,7 +40,7 @@ public
 			l_camera_img_out: out data port StereoCamAADL_Data::camera_image.impl;
 			r_camera_img_out: out data port StereoCamAADL_Data::camera_image.impl;
 		properties
-		--	Scheduling_Protocols => Rate_Monotonic_Protocol;
+			Scheduling_Protocols => Rate_Monotonic_Protocol;
 			Dispatch_protocol => periodic;
 			period => 100 ms;
 			compute_execution_time => 2 ms .. 10 ms;
@@ -60,7 +60,7 @@ public
 			laser_data_in: in data port StereoCamAADL_Data::laser_data.impl;
 			laser_data_out: out data port StereoCamAADL_Data::laser_data.impl;
 		properties
-		--	Scheduling_Protocols => Rate_Monotonic_Protocol;
+			Scheduling_Protocols => Rate_Monotonic_Protocol;
 			Dispatch_protocol => periodic;
 			period => 400 ms;
 			compute_execution_time => 10 ms .. 20 ms;
@@ -80,7 +80,7 @@ public
 			gps_data_in: in data port StereoCamAADL_Data::gps_data.impl;
 			gps_data_out: out data port StereoCamAADL_Data::gps_data.impl;
 		properties
-		--	Scheduling_Protocols => Rate_Monotonic_Protocol;
+			Scheduling_Protocols => Rate_Monotonic_Protocol;
 			Dispatch_protocol => periodic;
 			period => 200 ms;
 			compute_execution_time => 10 ms .. 20 ms;
@@ -98,11 +98,11 @@ public
 		features
 			control_data: in data port StereoCamAADL_Data::control_data.impl;
 		properties
-		--	Scheduling_Protocols => Rate_Monotonic_Protocol;
+			Scheduling_Protocols => Rate_Monotonic_Protocol;
 			Dispatch_protocol => periodic;
 			period => 400 ms;
 			compute_execution_time => 10 ms .. 20 ms;
-			deadline => 500 ms;
+			deadline => 700 ms;
 			priority => 2;
 			--POSIX_Scheduling_Policy => SCHED_FIFO;	
 	end wifi_control_data_collector;
@@ -119,11 +119,11 @@ public
 			l_camera_img_out: out data port StereoCamAADL_Data::camera_image.impl;
 			r_camera_img_out: out data port StereoCamAADL_Data::camera_image.impl;
 		properties
-		--	Scheduling_Protocols => Rate_Monotonic_Protocol;
+			Scheduling_Protocols => Rate_Monotonic_Protocol;
 			Dispatch_protocol => periodic;
 			period => 100 ms;
 			compute_execution_time => 10 ms .. 20 ms;
-			deadline => 300 ms;
+			deadline => 600 ms;
 			priority => 2;
 			--POSIX_Scheduling_Policy => SCHED_FIFO;	
 	end wifi_video_data_sender;
@@ -133,6 +133,13 @@ public
 
 	
 end StereoCamAADL_Threads;
+
+
+
+
+
+
+
 
 
 
